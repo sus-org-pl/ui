@@ -1,0 +1,41 @@
+{
+  "name": "my-library",
+  "description": "A base template for building a shareable web components library with Vite + Svelte",
+  "version": "0.0.0",
+  "type": "module",
+  "module": "dist/lib/my-library.js",
+  "main": "dist/lib/my-library.umd.js",
+  "scripts": {
+    "start": "npm run dev -s",
+    "dev": "vite --config vite.demo.config.ts",
+    "build": "vite build",
+    "build:demo": "vite build --config vite.demo.config.ts",
+    "preview": "vite preview --config vite.demo.config.ts",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "prepublishOnly": "npm run build -s",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "^1.5.0",
+    "@storybook/addon-essentials": "^8.1.5",
+    "@storybook/addon-interactions": "^8.1.5",
+    "@storybook/addon-links": "^8.1.5",
+    "@storybook/blocks": "^8.1.5",
+    "@storybook/svelte": "^8.1.5",
+    "@storybook/svelte-vite": "^8.1.5",
+    "@storybook/test": "^8.1.5",
+    "@sveltejs/vite-plugin-svelte": "^3.1.1",
+    "@tsconfig/svelte": "^5.0.4",
+    "storybook": "^8.1.5",
+    "svelte": "^4.2.17",
+    "svelte-check": "^3.8.0",
+    "svelte-preprocess": "^5.1.4",
+    "tslib": "^2.6.2",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.12"
+  },
+  "files": [
+    "dist/lib"
+  ]
+}
