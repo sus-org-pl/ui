@@ -1,0 +1,15 @@
+.small {
+  padding: 15px 19px;
+}
+
+.medium {
+  padding: 18px 27px;
+}
+
+.large {
+  padding: 18px 72px;
+
+  &.withIcon {
+    padding: 18px 27px;
+  }
+}
