@@ -1,5 +1,8 @@
 import type { Preview } from "@storybook/svelte";
 
+import sus from "./sus";
+import "../packages/lib/theme.css";
+
 const preview: Preview = {
   parameters: {
     controls: {
@@ -7,6 +10,9 @@ const preview: Preview = {
         color: /(background|color)$/i,
         date: /Date$/i,
       },
+    },
+    docs: {
+      theme: sus,
     },
   },
 };
