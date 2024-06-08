@@ -10,8 +10,4 @@
 <style lang="scss">
   @use "./styles/fonts.css";
   @use "./styles/theme.css";
-
-  .susThemedApp {
-    font-family: Ergonomique;
-  }
 </style>
