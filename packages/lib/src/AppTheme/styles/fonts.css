@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'Ergonomique';
+    src: url('../fonts/Ergonomique-Regular.woff2') format('woff2'),
+        url('fonts/Ergonomique-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ergonomique';
+    src: url('../fonts/Ergonomique-Semibold.woff2') format('woff2'),
+        url('../fonts/Ergonomique-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ergonomique';
+    src: url('../fonts/Ergonomique-Medium.woff2') format('woff2'),
+        url('../fonts/Ergonomique-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ergonomique';
+    src: url('../fonts/Ergonomique-MediumItalic.woff2') format('woff2'),
+        url('../fonts/Ergonomique-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ergonomique';
+    src: url('../fonts/Ergonomique-Bold.woff2') format('woff2'),
+        url('../fonts/Ergonomique-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
