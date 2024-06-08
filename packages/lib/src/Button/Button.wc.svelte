@@ -10,6 +10,7 @@
     ButtonTabindex,
     ButtonVariant,
   } from "./Button.types";
+  import Typography from "../Typography/Typography.wc.svelte";
 
   export let as: ButtonAsComponent;
   export let tabindex: ButtonTabindex = 0;
@@ -31,7 +32,9 @@
   role="button"
   {tabindex}
 >
-  {label}
+  <Typography type="button" as="span">
+    {label}
+  </Typography>
 </svelte:element>
 
 <style lang="scss">
