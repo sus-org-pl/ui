@@ -1,7 +1,7 @@
 import type { Preview } from "@storybook/svelte";
 
 import sus from "./sus";
-import "../packages/lib/theme.css";
+import "../packages/lib/src/AppTheme/styles/theme.css";
 
 const preview: Preview = {
   parameters: {
