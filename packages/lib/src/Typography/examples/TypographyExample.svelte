@@ -20,12 +20,13 @@
     .typographyExample {
         display: flex;
         flex-direction: column;
-        gap: 8px;
+        gap: 36px;
     }
 
     .label {
         text-transform: uppercase;
         font-size: 16px;
         color: var(--yellow);
+        margin-block-end: 8px;
     }
 </style>

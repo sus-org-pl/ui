@@ -1,27 +1,27 @@
 .yellow {
-    &.filled {
-      background: var(--yellow);
-      color: var(--black);
-    }
+  &.filled {
+    background: var(--yellow);
+    color: var(--black);
   }
+}
 
-  .black {
-    &.filled {
-      background: var(--black);
-      color: var(--white);
-    }
+.black {
+  &.filled {
+    background: var(--black);
+    color: var(--white);
   }
+}
 
-  .blue {
-    &.filled {
-      background: var(--blue);
-      color: var(--white);
-    }
+.blue {
+  &.filled {
+    background: var(--blue);
+    color: var(--white);
   }
+}
 
-  .white {
-    &.filled {
-      background: var(--white);
-      color: var(--blue);
-    }
+.white {
+  &.filled {
+    background: var(--white);
+    color: var(--blue);
   }
+}
