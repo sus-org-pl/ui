@@ -16,6 +16,7 @@
   .iconExample {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    row-gap: 36px;
     max-width: 500px;
   }
 
