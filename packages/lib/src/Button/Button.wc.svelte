@@ -75,6 +75,7 @@
     cursor: pointer;
     font-size: 18px;
     text-decoration: none;
+    width: max-content;
   }
 
   .iconWrapper {
