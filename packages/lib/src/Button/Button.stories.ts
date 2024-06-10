@@ -2,7 +2,6 @@ import type { Meta, StoryObj } from "@storybook/svelte";
 
 import Button from "./Button.wc.svelte";
 import {
-  ButtonAsComponent,
   ButtonColor,
   ButtonSize,
   ButtonTabindex,
@@ -14,9 +13,8 @@ const meta = {
   title: "Button",
   component: Button,
   argTypes: {
-    as: {
-      options: ButtonAsComponent,
-      control: { type: "radio" },
+    action: {
+      control: { type: "text" },
     },
     tabindex: {
       options: ButtonTabindex,
@@ -46,7 +44,7 @@ type Story = StoryObj<typeof meta>;
 
 export const _Button: Story = {
   args: {
-    as: "button",
+    action: "https://sus.org.pl",
     size: "medium",
     color: "yellow",
     variant: "filled",

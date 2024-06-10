@@ -4,6 +4,7 @@
   import cn from "classnames";
 
   import type {
+    ButtonAction,
     ButtonAsComponent,
     ButtonColor,
     ButtonSize,
@@ -16,7 +17,7 @@
 
   const MAX_BUTTON_ICON_SIZE = 18;
 
-  export let as: ButtonAsComponent;
+  export let action: ButtonAction;
   export let tabindex: ButtonTabindex = 0;
   export let size: ButtonSize;
   export let color: ButtonColor;
@@ -25,12 +26,23 @@
   export let iconItem: IconItem | null = null;
   export let iconColor: string = color;
 
+  const as: ButtonAsComponent = typeof action === "string" ? "a" : "button";
+  const onClick = typeof action === "function" ? action : null;
+  const href = typeof action === "string" ? action : null;
+
   const classNames = cn(["base", size, color, variant], {
     withIcon: Boolean(iconItem),
   });
 </script>
 
-<svelte:element this={as} on:click class={classNames} role="button" {tabindex}>
+<svelte:element
+  this={as}
+  on:click={onClick}
+  {href}
+  class={classNames}
+  role="button"
+  {tabindex}
+>
   <Typography type="button" as="span">
     {label}
   </Typography>
@@ -62,6 +74,7 @@
     box-shadow: none;
     cursor: pointer;
     font-size: 18px;
+    text-decoration: none;
   }
 
   .iconWrapper {

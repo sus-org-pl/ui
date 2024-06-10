@@ -9,3 +9,4 @@ export type ButtonTabindex = typeof ButtonTabindex[number];
 export type ButtonSize = typeof ButtonSize[number];
 export type ButtonColor = typeof ButtonColor[number];
 export type ButtonVariant = typeof ButtonVariant[number];
+export type ButtonAction = string | (() => void);

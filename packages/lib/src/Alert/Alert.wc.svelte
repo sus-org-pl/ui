@@ -5,17 +5,20 @@
 
   import Button from "../Button/Button.wc.svelte";
   import Typography from "../Typography/Typography.wc.svelte";
-  import type { AlertColor, AlertCtaAction } from "./Alert.types";
+  import type { AlertColor } from "./Alert.types";
   import { getAlertButtonConfig } from "./Alert.utils";
   import Icon from "../Icon/Icon.wc.svelte";
+  import type { ButtonAction } from "../Button/Button.types";
 
   export let message: string;
   export let color: AlertColor;
   export let ctaLabel: string;
-  export let ctaAction: AlertCtaAction;
+  export let ctaAction: ButtonAction;
   export let isOpen: boolean;
 
-  const { btnColor, btnComponent } = getAlertButtonConfig({ color, ctaAction });
+  const { btnColor } = getAlertButtonConfig({
+    color,
+  });
 
   const handleDismiss = () => (isOpen = false);
 
@@ -37,11 +40,11 @@
     </Typography>
     <Button
       label={ctaLabel}
-      as={btnComponent}
       color={btnColor}
       variant="outlined"
       size="small"
       iconItem="arrow"
+      action={ctaAction}
     />
   </section>
 {/if}

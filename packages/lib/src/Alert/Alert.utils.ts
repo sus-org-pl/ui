@@ -1,21 +1,14 @@
-import type { ButtonAsComponent, ButtonColor } from "../Button/Button.types";
-import type { AlertColor, AlertCtaAction } from "./Alert.types";
+import type { ButtonColor } from "../Button/Button.types";
+import type { AlertColor } from "./Alert.types";
 
 interface GetAlertButtonConfigProps {
   color: AlertColor;
-  ctaAction: AlertCtaAction;
 }
 
-export const getAlertButtonConfig = ({
-  color,
-  ctaAction,
-}: GetAlertButtonConfigProps) => {
-  const btnComponent: ButtonAsComponent =
-    typeof ctaAction === "string" ? "a" : "button";
+export const getAlertButtonConfig = ({ color }: GetAlertButtonConfigProps) => {
   const btnColor: ButtonColor = color === "yellow" ? "black" : "white";
 
   return {
     btnColor,
-    btnComponent,
   };
 };
