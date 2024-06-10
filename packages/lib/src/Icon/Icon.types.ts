@@ -1,5 +1,7 @@
 import resources from "./resources";
 
+export const IconItem = Object.keys(resources);
+
 export type IconWidth = string | number;
 export type IconHeight = string | number;
 export type IconItem = keyof typeof resources;

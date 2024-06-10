@@ -8,6 +8,7 @@ import {
   ButtonTabindex,
   ButtonVariant,
 } from "./Button.types";
+import { IconItem } from "../Icon/Icon.types";
 
 const meta = {
   title: "Button",
@@ -33,8 +34,9 @@ const meta = {
       options: ButtonVariant,
       control: { type: "radio" },
     },
-    iconImageSource: {
-      control: { type: "text" },
+    iconItem: {
+      options: IconItem,
+      control: { type: "select" },
     },
   },
 } satisfies Meta<Button>;
