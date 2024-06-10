@@ -31,13 +31,10 @@ export default defineConfig({
   },
   plugins: [
     svelte({
-      exclude: /\.wc\.svelte$/ as any,
+      include: /.svelte$/ as any,
       compilerOptions: {
-        customElement: false
+        customElement: true,
       }
-    }),
-    svelte({
-      include: /\.wc\.svelte$/ as any,
     }),
     minifyEs()
   ]
