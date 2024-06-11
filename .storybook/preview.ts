@@ -4,6 +4,8 @@ import sus from "./sus";
 import "../packages/lib/src/AppTheme/styles/fonts.css";
 import "../packages/lib/src/AppTheme/styles/theme.css";
 
+document.body.className += "susThemedApp";
+
 const preview: Preview = {
   parameters: {
     controls: {
