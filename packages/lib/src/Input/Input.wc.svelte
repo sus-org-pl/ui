@@ -51,6 +51,7 @@
     background: transparent;
     border: none;
     outline: none;
+    width: 100%;
 
     font-family: Montserrat;
     font-weight: normal;
