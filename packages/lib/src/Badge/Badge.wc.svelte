@@ -18,12 +18,12 @@
 </div>
 
 <style lang="scss">
-    @use "./styles/colors.scss";
+  @use "./styles/colors.scss";
 
-    .base {
-        width: max-content;
-        padding: 4px 10px;
-        border-radius: 5px;
-        text-transform: uppercase;
-    }
+  .base {
+    width: max-content;
+    padding: 4px 10px;
+    border-radius: 5px;
+    text-transform: uppercase;
+  }
 </style>

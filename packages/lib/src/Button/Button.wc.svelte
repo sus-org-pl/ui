@@ -67,7 +67,6 @@
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    text-transform: uppercase;
     outline: 0;
     border: none;
     border-radius: 6px;
