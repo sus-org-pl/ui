@@ -17,6 +17,26 @@ const preview: Preview = {
     docs: {
       theme: sus,
     },
+    backgrounds: {
+      values: [
+        {
+          name: "coral",
+          value: "var(--coral)",
+        },
+        {
+          name: "yellow",
+          value: "var(--yellow)",
+        },
+        {
+          name: "violet",
+          value: "var(--violet)",
+        },
+        {
+          name: "blue",
+          value: "var(--blue)",
+        },
+      ],
+    },
   },
 };
 
