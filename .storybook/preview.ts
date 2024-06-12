@@ -35,6 +35,10 @@ const preview: Preview = {
           name: "blue",
           value: "var(--blue)",
         },
+        {
+          name: "blue-gray",
+          value: "var(--blue-gray)",
+        },
       ],
     },
   },
