@@ -6,5 +6,6 @@ export { default as Button } from './src/Button/Button.wc.svelte';
 export { default as Card } from './src/Card/Card.wc.svelte';
 export { default as Icon } from './src/Icon/Icon.wc.svelte';
 export { default as Input } from './src/Input/Input.wc.svelte';
+export { default as Logo } from './src/Logo/Logo.wc.svelte';
 export { default as NewsfeedCard } from './src/NewsfeedCard/NewsfeedCard.wc.svelte';
 export { default as Typography } from './src/Typography/Typography.wc.svelte';
