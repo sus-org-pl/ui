@@ -20,7 +20,7 @@
   });
 </script>
 
-<svelte:element this={as} on:focus class={classNames}>
+<svelte:element this={as} class={classNames}>
   <img src={thumbnailImageSource} alt={thumbnailAlt} />
   <div class="contentWrapper">
     {#if tag}
