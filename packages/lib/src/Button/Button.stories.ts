@@ -52,3 +52,16 @@ export const _Button: Story = {
   },
   parameters: {},
 };
+
+export const _Button_with_icon: Story = {
+  args: {
+    action: "https://sus.org.pl",
+    size: "medium",
+    color: "black",
+    variant: "outlined",
+    label: "Zobacz raport",
+    iconItem: "arrow",
+    iconColor: "var(--black)"
+  },
+  parameters: {},
+};

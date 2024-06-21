@@ -13,4 +13,5 @@
 
 .susThemedApp {
   font-family: Ergonomique;
+  box-sizing: border-box;
 }
