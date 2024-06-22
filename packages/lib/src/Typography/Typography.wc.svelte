@@ -6,11 +6,14 @@
   import { TypogprahyType, TypographyAsComponent } from "./Typography.types";
 
   export let type: TypogprahyType;
+  export let forceNotCapitalize: boolean = false;
   export let as: TypographyAsComponent = TypographyAsComponent.includes(type)
     ? type
     : "p";
 
-  const classNames = cn(["base", type]);
+  const classNames = cn(["base", type], {
+    forceNotCapitalize,
+  });
 </script>
 
 <svelte:element this={as} class={classNames}>
@@ -23,4 +26,8 @@
 
 <style lang="scss">
   @use "./styles/types.scss";
+
+  .forceNotCapitalize {
+    text-transform: none;
+  }
 </style>
