@@ -39,13 +39,12 @@
       {message}
     </Typography>
     <Button
-      label={ctaLabel}
       color={btnColor}
       variant="outlined"
       size="small"
       iconItem="arrow"
-      action={ctaAction}
-    />
+      action={ctaAction}>{ctaLabel}</Button
+    >
   </section>
 {/if}
 
