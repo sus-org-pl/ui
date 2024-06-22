@@ -11,6 +11,18 @@ const meta = {
       options: CardAsComponent,
       control: { type: "inline-radio" },
     },
+    title: {
+      control: { type: "text" },
+    },
+    body: {
+      control: { type: "text" },
+    },
+    choosePriceCta: {
+      control: { type: "text" },
+    },
+    suggestedPrices: {
+      control: { type: "object" },
+    },
   },
   parameters: {
     layout: "centered",
