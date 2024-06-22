@@ -1,4 +1,4 @@
-export const DONATE_WIDGET_EXAMPLE_PRICES = [5, 10, 20, 50];
+export const DONATE_WIDGET_SUGGESTED_PRICES = [5, 10, 20, 50];
 
 export const NGO_START_PAYMENT_ENDPOINT = "https://api.nowe.platnosci.ngo.pl/Public/campaign/5n7MqG/StartPayment";
 export const NGO_CAMPAIGN_ID = 2452
