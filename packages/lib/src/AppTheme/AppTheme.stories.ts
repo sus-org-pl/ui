@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/svelte";
 import AppTheme from "./AppTheme.wc.svelte";
 
 const meta = {
-  title: "AppTheme",
+  title: "Components/AppTheme",
   component: AppTheme,
 } satisfies Meta<AppTheme>;
 

@@ -3,7 +3,7 @@ import Alert from "./Alert.wc.svelte";
 import { AlertColor } from "./Alert.types";
 
 const meta = {
-  title: "Alert",
+  title: "Components/Alert",
   component: Alert,
   argTypes: {
     color: {

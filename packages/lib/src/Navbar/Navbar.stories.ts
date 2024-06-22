@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/svelte";
 import Navbar from "./Navbar.wc.svelte";
 
 const meta = {
-  title: "Navbar",
+  title: "Components/Navigation",
   component: Navbar,
   argTypes: {},
 } satisfies Meta<Navbar>;

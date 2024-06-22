@@ -5,7 +5,7 @@ import Badge from "./Badge.wc.svelte";
 import { BadgeColor } from "./Badge.types";
 
 const meta = {
-  title: "Badge",
+  title: "Components/Badge",
   component: Badge,
   argTypes: {
     color: {

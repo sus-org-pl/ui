@@ -10,7 +10,7 @@ import {
 import { IconItem } from "../Icon/Icon.types";
 
 const meta = {
-  title: "Button",
+  title: "Components/Button",
   component: Button,
   argTypes: {
     action: {

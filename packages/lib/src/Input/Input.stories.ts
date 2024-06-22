@@ -5,7 +5,7 @@ import { IconItem } from "../Icon/Icon.types";
 import { InputIconSize } from "./Input.types";
 
 const meta = {
-  title: "Input",
+  title: "Components/Input",
   component: Input,
   argTypes: {
     placeholder: {

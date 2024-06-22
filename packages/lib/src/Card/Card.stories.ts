@@ -3,7 +3,7 @@ import Card from "./Card.wc.svelte";
 import { CardAsComponent, CardColor, CardVariant } from "./Card.types";
 
 const meta = {
-  title: "Card",
+  title: "Components/Card",
   component: Card,
   argTypes: {
     as: {

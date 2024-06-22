@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/svelte";
 import Logo from "./Logo.wc.svelte";
 
 const meta = {
-  title: "Logo",
+  title: "Components/Logo",
   component: Logo,
   argTypes: {
     clickable: {

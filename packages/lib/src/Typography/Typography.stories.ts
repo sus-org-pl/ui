@@ -3,7 +3,7 @@ import Typography from "./Typography.wc.svelte";
 import { TypogprahyType, TypographyAsComponent } from "./Typography.types";
 
 const meta = {
-  title: "Typography",
+  title: "Components/Typography",
   component: Typography,
   argTypes: {
     as: {

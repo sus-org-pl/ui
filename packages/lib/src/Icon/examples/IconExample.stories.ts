@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/svelte";
 import IconExample from "./IconExample.svelte";
 
 const meta = {
-  title: "Icon",
+  title: "Components/Icon",
   component: IconExample,
 } satisfies Meta<IconExample>;
 

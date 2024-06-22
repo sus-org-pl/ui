@@ -3,7 +3,7 @@ import NewsfeedCard from "./NewsfeedCard.wc.svelte";
 import { NewsfeedCardAsComponent } from "./NewsfeedCard.types";
 
 const meta = {
-  title: "Card",
+  title: "Components/Card",
   component: NewsfeedCard,
   argTypes: {
     as: {

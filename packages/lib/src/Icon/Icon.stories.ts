@@ -3,7 +3,7 @@ import Icon from "./Icon.wc.svelte";
 import { IconItem } from "./Icon.types";
 
 const meta = {
-  title: "Icon",
+  title: "Components/Icon",
   component: Icon,
   argTypes: {
     item: {

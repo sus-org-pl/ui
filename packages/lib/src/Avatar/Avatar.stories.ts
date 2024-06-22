@@ -3,7 +3,7 @@ import Avatar from "./Avatar.wc.svelte";
 import { AvatarSize } from "./Avatar.types";
 
 const meta = {
-  title: "Avatar",
+  title: "Components/Avatar",
   component: Avatar,
   argTypes: {
     size: {

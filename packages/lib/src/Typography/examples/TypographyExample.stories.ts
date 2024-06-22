@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/svelte";
 import TypographyExample from "./TypographyExample.svelte";
 
 const meta = {
-  title: "Typography",
+  title: "Components/Typography",
   component: TypographyExample,
 } satisfies Meta<TypographyExample>;
 
