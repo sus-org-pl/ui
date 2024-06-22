@@ -11,7 +11,9 @@
     DEFAULT_DONATE_CHOOSE_PRICE_CTA,
     DEFAULT_DONATE_TITLE,
     DONATE_WIDGET_EXAMPLE_PRICES,
+    NGO_CAMPAIGN_ID,
   } from "./DonateWidget.consts";
+  import { getPaymentLink } from "./DonateWidget.utils";
 
   export let body: string = DEFAULT_DONATE_BODY;
   export let choosePriceCta: string = DEFAULT_DONATE_CHOOSE_PRICE_CTA;
@@ -23,37 +25,38 @@
 <Card {as} color="violet" variant="flat">
   <div class="slotWrapper">
     <Logo height={45} />
-  <Typography type="title" as="p">{title}</Typography>
-  <Typography type="body1" as="p">
-    {body}
-  </Typography>
-  <Typography type="button" as="p" forceNotCapitalize>
-    {choosePriceCta}
-  </Typography>
-  <div class="suggestedPricesWrapper">
-    {#each DONATE_WIDGET_EXAMPLE_PRICES as price}
-      <Button
-        action={() => console.log(price)}
-        variant="filled"
-        color="white"
-        size="small"
-      >
-        {price} PLN
-      </Button>
-    {/each}
-  </div>
+    <Typography type="title" as="p">{title}</Typography>
+    <Typography type="body1" as="p">
+      {body}
+    </Typography>
+    <Typography type="button" as="p" forceNotCapitalize>
+      {choosePriceCta}
+    </Typography>
+    <div class="suggestedPricesWrapper">
+      {#each DONATE_WIDGET_EXAMPLE_PRICES as price}
+        <Button
+          action={async () =>
+            getPaymentLink({ price, campaignId: NGO_CAMPAIGN_ID })}
+          variant="filled"
+          color="white"
+          size="small"
+        >
+          {price} PLN
+        </Button>
+      {/each}
+    </div>
   </div>
 </Card>
 
 <style>
-    .slotWrapper {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
+  .slotWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
 
-    .suggestedPricesWrapper {
-        display: flex;
-        gap: 18px;
-    }
+  .suggestedPricesWrapper {
+    display: flex;
+    gap: 18px;
+  }
 </style>
