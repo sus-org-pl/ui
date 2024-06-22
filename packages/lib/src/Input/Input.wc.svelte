@@ -1,26 +1,31 @@
 <svelte:options customElement="sus-input" />
 
 <script lang="ts">
+  import classNames from "classnames";
   import type { IconItem } from "../Icon/Icon.types";
   import Icon from "../Icon/Icon.wc.svelte";
+  import { INPUT_ICON_COLOR } from "./Input.consts";
+  import type { InputIconSize } from "./Input.types";
 
   export let iconItem: IconItem | null = null;
+  export let iconSize: InputIconSize = "normal";
   export let placeholder: string = "";
   export let name: string | null = null;
   export let id: string | null = null;
   export let value: string;
 
-  const INPUT_ICON_SIZE = 39;
-  const INPUT_ICON_COLOR = "var(--black)";
+  const inputIconSize = iconSize === "normal" ? 18 : 39;
+
+  const iconWrapperClassNames = classNames(["iconWrapper", iconSize]);
 </script>
 
 <div class="base">
   {#if iconItem}
-    <div class="iconWrapper">
+    <div class={iconWrapperClassNames}>
       <Icon
         item={iconItem}
-        height={INPUT_ICON_SIZE}
-        width={INPUT_ICON_SIZE}
+        height={inputIconSize}
+        width={inputIconSize}
         color={INPUT_ICON_COLOR}
       />
     </div>
@@ -43,7 +48,7 @@
     align-items: center;
 
     border-radius: 5px;
-    padding: 12px 4px;
+    padding: 12px 16px;
     background: var(--white);
   }
 
@@ -51,6 +56,7 @@
     background: transparent;
     border: none;
     outline: none;
+
     width: 100%;
 
     font-family: Montserrat;
@@ -64,6 +70,10 @@
   }
 
   .iconWrapper {
-    margin-inline: 36px;
+    margin-inline: 12px 24px;
+
+    &.large {
+      margin-inline: 24px;
+    }
   }
 </style>
