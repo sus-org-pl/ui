@@ -1,3 +1,5 @@
+<svelte:options customElement="sus-small-donate-widget" />
+
 <script lang="ts">
   import type { ButtonAction } from "../../Button/Button.types";
   import Button from "../../Button/Button.wc.svelte";

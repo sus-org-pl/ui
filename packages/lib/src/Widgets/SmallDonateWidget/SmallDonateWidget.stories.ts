@@ -31,5 +31,7 @@ type Story = StoryObj<typeof meta>;
 
 export const _SmallDonateWidget: Story = {
   args: {},
-  parameters: {},
+  parameters: {
+    layout: "centered",
+  },
 };
