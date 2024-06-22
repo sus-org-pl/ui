@@ -8,8 +8,11 @@
   export let as: CardAsComponent = "div";
   export let color: CardColor;
   export let variant: CardVariant;
+  export let fullWidth: boolean = false;
 
-  const classNames = cn(["base", color, variant]);
+  const classNames = cn(["base", color, variant], {
+    fullWidth,
+  });
 </script>
 
 <svelte:element this={as} class={classNames}>
@@ -22,6 +25,7 @@
 
 <style lang="scss">
   @use "./styles/colors.scss";
+  @use "./styles/sizes.scss";
   @use "./styles/variants.scss";
 
   .base {
