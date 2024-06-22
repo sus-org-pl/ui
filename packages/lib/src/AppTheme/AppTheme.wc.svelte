@@ -7,11 +7,6 @@
   </slot>
 </div>
 
-<style lang="scss">
-  @use "./styles/fonts.css";
-  @use "./styles/theme.css";
-</style>
-
 <svelte:head>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true" />
@@ -109,7 +104,7 @@
       font: inherit;
       vertical-align: baseline;
     }
-    
+
     article,
     aside,
     details,
@@ -145,5 +140,28 @@
       border-collapse: collapse;
       border-spacing: 0;
     }
+
+    :root {
+      --black: #242521;
+      --deep-gray: #444748;
+      --gray: #5d5e62;
+      --blue-gray: #8c94b6;
+      --gray-white: #f4f8fb;
+      --blue: #1684d3;
+      --yellow: #fdcd18;
+      --coral: #f50f3f;
+      --violet: #6300c7;
+      --white: #ffffff;
+    }
+
+    .susThemedApp {
+      font-family: Ergonomique;
+      box-sizing: border-box;
+    }
   </style>
 </svelte:head>
+
+<style lang="scss">
+  @use "./styles/fonts.css";
+  @use "./styles/theme.css";
+</style>
