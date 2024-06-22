@@ -1,5 +1,5 @@
 export const CardAsComponent = ["article", "div", "section"] as const;
-export const CardColor = ["white", "gray"] as const;
+export const CardColor = ["white", "gray", "violet"] as const;
 export const CardVariant = ["flat", "shadow"] as const;
 
 export type CardAsComponent = typeof CardAsComponent[number];
