@@ -22,7 +22,6 @@
   export let size: ButtonSize;
   export let color: ButtonColor;
   export let variant: ButtonVariant;
-  export let label: string;
   export let iconItem: IconItem | null = null;
   export let iconColor: string = color;
 
@@ -44,7 +43,7 @@
   {tabindex}
 >
   <Typography type="button" as="span">
-    {label}
+    <slot>Label</slot>
   </Typography>
   {#if iconItem}
     <div class="iconWrapper">

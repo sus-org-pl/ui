@@ -48,7 +48,6 @@ export const _Button: Story = {
     size: "medium",
     color: "yellow",
     variant: "filled",
-    label: "Szukaj Susła",
   },
   parameters: {},
 };
@@ -59,7 +58,6 @@ export const _Button_with_icon: Story = {
     size: "medium",
     color: "black",
     variant: "outlined",
-    label: "Zobacz raport",
     iconItem: "arrow",
     iconColor: "var(--black)"
   },
