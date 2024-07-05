@@ -1,0 +1,11 @@
+.socialMediaWrapper {
+  display: flex;
+  gap: 26px;
+  grid-row: 1 / 2;
+}
+
+.endingCard {
+  @media (min-width: 768px) {
+    grid-column: 5 / 7;
+  }
+}
