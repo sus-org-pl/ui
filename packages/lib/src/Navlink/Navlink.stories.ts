@@ -6,8 +6,8 @@ const meta = {
   title: "Components/Navigation",
   component: Navlink,
   argTypes: {
-    href: {
-      control: { type: "text" },
+    target: {
+      control: { type: "object" },
     },
   },
 } satisfies Meta<Navlink>;
@@ -17,7 +17,35 @@ type Story = StoryObj<typeof meta>;
 
 export const _Navlink: Story = {
   args: {
-    href: "https://sus.org.pl",
+    target: {
+      title: "Działalność",
+      elements: [
+        {
+          label: "Co zrobić, gdy prawa są łamane?",
+          target: "",
+        },
+        {
+          label: "Publikacje",
+          target: "",
+        },
+        {
+          label: "Uczniowski Poradnik Prawny",
+          target: "",
+        },
+        {
+          label: "Poradniki",
+          target: "",
+        },
+        {
+          label: "Mity szkolne",
+          target: "",
+        },
+        {
+          label: "Wzory pism",
+          target: "",
+        },
+      ],
+    },
   },
   parameters: {},
 };
