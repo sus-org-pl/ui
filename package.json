@@ -1,7 +1,7 @@
 {
   "name": "@sus-org-pl/ui",
   "description": "The official UI library of sus.org.pl",
-  "version": "0.0.1-alpha",
+  "version": "0.0.1",
   "type": "module",
   "module": "dist/lib/my-library.js",
   "main": "dist/lib/my-library.umd.js",
@@ -12,7 +12,8 @@
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "prepublishOnly": "npm run build -s",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "release": "standard-version && git push --follow-tags && npm publish"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.5.0",
@@ -27,6 +28,7 @@
     "@storybook/theming": "^8.1.5",
     "@sveltejs/vite-plugin-svelte": "^3.1.1",
     "@tsconfig/svelte": "^5.0.4",
+    "standard-version": "^9.5.0",
     "storybook": "^8.1.5",
     "svelte": "^4.2.17",
     "svelte-check": "^3.8.0",
