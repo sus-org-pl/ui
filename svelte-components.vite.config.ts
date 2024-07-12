@@ -9,16 +9,16 @@ const bundleComponents = process.env.BUNDLE_COMPONENTS ?? true;
 export default defineConfig({
   root: './packages/lib/',
   build: {
-    outDir: '../../dist/lib',
+    outDir: '../../dist/lib/svelte',
     emptyOutDir: true,
     lib: {
       entry: './index.ts',
       formats: bundleComponents ? ['es', 'esm', 'umd'] as any : ['es'],
       name: pkg.name.replace(/-./g, (char) => char[1].toUpperCase()),
       fileName: (format) => ({
-        es: `${pkg.name}.js`,
-        esm: `${pkg.name}.min.js`,
-        umd: `${pkg.name}.umd.js`,
+        es: `index.js`,
+        esm: `index.min.js`,
+        umd: `index.umd.js`,
       })[format]
     },
     rollupOptions: {
@@ -33,7 +33,7 @@ export default defineConfig({
     svelte({
       include: /.svelte$/ as any,
       compilerOptions: {
-        customElement: true,
+        customElement: false,
       }
     }),
     minifyEs()

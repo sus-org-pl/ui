@@ -6,5 +6,5 @@
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true
   },
-  "include": ["vite.config.ts"]
+  "include": ["wc.vite.config.ts", "svelte-components.vite.config.ts"]
 }

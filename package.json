@@ -3,17 +3,19 @@
   "description": "The official UI library of sus.org.pl",
   "version": "0.0.2",
   "type": "module",
-  "module": "dist/lib/my-library.js",
-  "main": "dist/lib/my-library.umd.js",
   "scripts": {
     "start": "npm run dev -s",
     "dev": "vite --config vite.demo.config.ts",
-    "build": "vite build",
+    "build": "vite build --config wc.vite.config.ts && vite build --config svelte-components.vite.config.ts",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "prepublishOnly": "npm run build -s",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "release": "standard-version && git push --follow-tags && npm publish"
+  },
+  "exports": {
+    "svelte": "./dist/lib/svelte/index.umd.js",
+    "web-components": "./dist/lib/web-components/index.umd.js"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.5.0",
