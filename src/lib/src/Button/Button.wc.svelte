@@ -24,6 +24,8 @@
   export let variant: ButtonVariant;
   export let iconItem: IconItem | null = null;
   export let iconColor: string = color;
+  /** Pass any props direct to the component */
+  export let restProps: Record<string, unknown> = {};
 
   const as: ButtonAsComponent = typeof action === "string" ? "a" : "button";
   const onClick = typeof action === "function" ? action : null;
@@ -41,6 +43,7 @@
   class={classNames}
   role="button"
   {tabindex}
+  {...restProps}
 >
   <Typography type="button" as="span">
     <slot>Label</slot>

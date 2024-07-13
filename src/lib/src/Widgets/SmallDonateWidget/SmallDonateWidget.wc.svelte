@@ -28,7 +28,13 @@
       {body}
     </Typography>
   </div>
-  <Button action={donateAction} color="yellow" variant="filled" size="small">
+  <Button
+    action={donateAction}
+    color="yellow"
+    variant="filled"
+    size="small"
+    restProps={{ target: "_blank" }}
+  >
     {donateCtaLabel}
   </Button>
 </Card>
