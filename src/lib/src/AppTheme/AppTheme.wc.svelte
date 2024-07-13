@@ -154,7 +154,8 @@
       --white: #ffffff;
     }
 
-    .susThemedApp {
+    .susThemedApp,
+    .susThemedApp * {
       font-family: Ergonomique;
       box-sizing: border-box;
     }
