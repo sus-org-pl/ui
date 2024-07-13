@@ -43,7 +43,7 @@
     </Typography>
     <div class="sectionElements">
       {#each elements as { label, target }}
-        <Navlink href={target}>{label}</Navlink>
+        <Navlink {target}>{label}</Navlink>
       {/each}
     </div>
   </div>
@@ -64,6 +64,11 @@
     align-items: center;
     gap: 24px;
     background: var(--white);
+    position: absolute;
+    top: 86px;
+    left: 0;
+    max-width: 100%;
+    padding: 22px 88px;
 
     @media (min-width: 768px) {
       grid-template-columns: repeat(6, 1fr);
