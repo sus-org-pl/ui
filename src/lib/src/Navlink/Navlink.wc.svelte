@@ -3,17 +3,25 @@
 <script lang="ts">
   import NavSection from "../NavSection/NavSection.wc.svelte";
   import Typography from "../Typography/Typography.wc.svelte";
+  import { ACTIVE_NAV_SECTION } from "./Navlink.stores.js";
   import type { NavlinkTarget } from "./Navlink.types";
 
   export let target: NavlinkTarget;
-  let isSectionOpen = false;
 
+  const isSection = typeof target === "object";
   const href = typeof target === "string" ? target : undefined;
 
-  const toggleIsOpenSection =
-    typeof target === "object"
-      ? () => (isSectionOpen = !isSectionOpen)
-      : undefined;
+  let isSectionOpen = isSection ? false : undefined;
+
+  const toggleIsOpenSection = isSection
+    ? () => ACTIVE_NAV_SECTION.set(isSectionOpen ? null : target.title)
+    : undefined;
+
+  if (typeof isSectionOpen === "boolean") {
+    ACTIVE_NAV_SECTION.subscribe((currentOpenState) => {
+      isSectionOpen = currentOpenState === target.title;
+    });
+  }
 </script>
 
 <a {href} on:click={toggleIsOpenSection} class="base">
@@ -22,7 +30,7 @@
   </Typography>
 </a>
 
-{#if typeof target === "object" && isSectionOpen}
+{#if isSection && isSectionOpen}
   <NavSection as="div" title={target.title} elements={target.elements} />
 {/if}
 
