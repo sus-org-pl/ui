@@ -69,6 +69,7 @@
     left: 0;
     max-width: 100%;
     padding: 22px 88px;
+    box-shadow: 0px 4px 8px 3px rgba(0, 0, 0, 10%);
 
     @media (min-width: 768px) {
       grid-template-columns: repeat(6, 1fr);
