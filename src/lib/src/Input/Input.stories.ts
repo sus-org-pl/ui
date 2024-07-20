@@ -25,6 +25,9 @@ const meta = {
       options: InputIconSize,
       control: { type: "radio" },
     },
+    isClearable: {
+      control: { type: "boolean" },
+    },
   },
 } satisfies Meta<Input>;
 
@@ -52,6 +55,22 @@ export const _Input_with_icon: Story = {
     name: "interventionSearch",
     iconItem: "search",
     value: "",
+  },
+  parameters: {
+    backgrounds: {
+      default: "blue",
+    },
+  },
+};
+
+export const _Input_clearable_with_icon: Story = {
+  args: {
+    placeholder: "Wyszukaj interwencje",
+    id: "interventionSearch",
+    name: "interventionSearch",
+    iconItem: "search",
+    value: "",
+    isClearable: true,
   },
   parameters: {
     backgrounds: {

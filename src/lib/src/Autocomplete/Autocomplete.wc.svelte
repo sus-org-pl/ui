@@ -14,11 +14,11 @@
   } from "./Autocomplete.types";
 
   let autocompleteOptions: AutocompleteOptions = [];
-  
-  /** 
-   * @readonly 
-   * Heads up! You shouldn't overwrite this prop manually. 
-   * Use autocomplete as a controlled component. 
+
+  /**
+   * @readonly
+   * Heads up! You shouldn't overwrite this prop manually.
+   * Use autocomplete as a controlled component.
    * */
   export let value: string = "";
 
@@ -36,11 +36,13 @@
   export let clearOptionsOnOptionClick: boolean = true;
   export let optionsTypogprahyType: AutocompleteOptionsTypogprahyType = "body2";
 
+  const clearAutocompleteOptions = () => (autocompleteOptions = []);
+
   const handleInput = (event: Event) => {
     const target = event.target as HTMLInputElement;
 
     if (clearOptionsOnEmptyValue && !target.value) {
-      autocompleteOptions = [];
+      clearAutocompleteOptions();
       return;
     }
 
@@ -55,6 +57,7 @@
   <Input
     bind:value
     on:input={handleInput}
+    on:clear={clearAutocompleteOptions}
     {iconItem}
     {iconSize}
     {placeholder}

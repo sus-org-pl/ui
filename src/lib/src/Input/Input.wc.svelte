@@ -10,6 +10,9 @@
     NORMAL_ICON_SIZE,
   } from "./Input.consts";
   import type { InputIconSize } from "./Input.types";
+  import { createEventDispatcher } from "svelte";
+
+  const dispatch = createEventDispatcher();
 
   export let iconItem: IconItem | null = null;
   export let iconSize: InputIconSize = "normal";
@@ -18,12 +21,21 @@
   export let id: string | null = null;
   export let value: string;
   export let fullWidth: boolean = false;
+  export let isClearable: boolean = false;
 
   const inputIconSize =
     iconSize === "normal" ? NORMAL_ICON_SIZE : LARGE_ICON_SIZE;
+  const clearIconSize =
+    iconSize === "normal" ? NORMAL_ICON_SIZE * 0.8 : NORMAL_ICON_SIZE;
 
   const inputWrapperClassNames = classNames(["base"], { fullWidth });
   const iconWrapperClassNames = classNames(["iconWrapper", iconSize]);
+
+  const clearInputValue = () => {
+    value = "";
+
+    dispatch("clear");
+  };
 </script>
 
 <div class={inputWrapperClassNames}>
@@ -48,6 +60,18 @@
     {name}
     {placeholder}
   />
+  {#if isClearable}
+    <div class="clearBtnWrapper">
+      <Icon
+        on:click={clearInputValue}
+        item="cross"
+        height={clearIconSize}
+        width={clearIconSize}
+        color={INPUT_ICON_COLOR}
+        role="button"
+      />
+    </div>
+  {/if}
 </div>
 
 <style lang="scss">
@@ -70,6 +94,7 @@
     outline: none;
 
     width: 100%;
+    padding-right: 16px;
 
     font-family: Montserrat;
     font-weight: normal;
@@ -87,5 +112,9 @@
     &.large {
       margin-inline: 24px;
     }
+  }
+
+  .clearBtnWrapper {
+    margin-inline-end: 4px;
   }
 </style>
