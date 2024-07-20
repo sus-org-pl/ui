@@ -107,10 +107,18 @@
   }
 
   .iconWrapper {
-    margin-inline: 12px 24px;
+    margin-inline: 8px;
+
+    @media (min-width: 768px) {
+      margin-inline: 12px 24px;
+    }
 
     &.large {
-      margin-inline: 24px;
+      margin-inline: 12px;
+
+      @media (min-width: 768px) {
+        margin-inline: 24px;
+      }
     }
   }
 

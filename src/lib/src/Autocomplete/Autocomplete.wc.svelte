@@ -71,22 +71,26 @@
     {isClearable}
   />
 
-  <div class={optionsClassNames}>
-    {#each autocompleteOptions as { label, action, value: optionValue }}
-      <div
-        class="option"
-        role="option"
-        aria-selected={false}
-        tabindex={0}
-        on:click={action ? () => action() : () => (value = optionValue || "")}
-        on:keydown={action ? () => action() : () => (value = optionValue || "")}
-      >
-        <Typography type={optionsTypogprahyType}>
-          {label}
-        </Typography>
-      </div>
-    {/each}
-  </div>
+  {#if autocompleteOptions.length}
+    <div class={optionsClassNames}>
+      {#each autocompleteOptions as { label, action, value: optionValue }}
+        <div
+          class="option"
+          role="option"
+          aria-selected={false}
+          tabindex={0}
+          on:click={action ? () => action() : () => (value = optionValue || "")}
+          on:keydown={action
+            ? () => action()
+            : () => (value = optionValue || "")}
+        >
+          <Typography type={optionsTypogprahyType}>
+            {label}
+          </Typography>
+        </div>
+      {/each}
+    </div>
+  {/if}
 </div>
 
 <style lang="scss">
@@ -97,18 +101,20 @@
 
   .autocompleteOptions {
     position: absolute;
-    background: var(--white);
+    top: 60px;
     border-radius: 5px;
     width: 100%;
-    top: 60px;
+
+    background: var(--white);
     color: var(--black);
+    box-shadow: 0px 4px 8px 3px rgba(0, 0, 0, 10%);
 
     &.large {
       top: 80px;
     }
 
     .option {
-      border-bottom: 1px solid var(--gray);
+      border-bottom: 1px solid var(--gray-white);
       padding: 16px;
       cursor: pointer;
 

@@ -5,6 +5,7 @@ import chat from "./_chat";
 import cross from "./_cross";
 import document from "./_document";
 import facebook from "./_facebook";
+import hamburger from "./_hamburger";
 import instagram from "./_instagram";
 import lifebelt from "./_lifebelt";
 import megaphone from "./_megaphone";
@@ -20,6 +21,7 @@ const resources = {
   cross,
   document,
   facebook,
+  hamburger,
   instagram,
   lifebelt,
   megaphone,
