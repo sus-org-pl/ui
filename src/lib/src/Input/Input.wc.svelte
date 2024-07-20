@@ -4,7 +4,11 @@
   import classNames from "classnames";
   import type { IconItem } from "../Icon/Icon.types";
   import Icon from "../Icon/Icon.wc.svelte";
-  import { INPUT_ICON_COLOR } from "./Input.consts";
+  import {
+    INPUT_ICON_COLOR,
+    LARGE_ICON_SIZE,
+    NORMAL_ICON_SIZE,
+  } from "./Input.consts";
   import type { InputIconSize } from "./Input.types";
 
   export let iconItem: IconItem | null = null;
@@ -13,13 +17,16 @@
   export let name: string | null = null;
   export let id: string | null = null;
   export let value: string;
+  export let fullWidth: boolean = false;
 
-  const inputIconSize = iconSize === "normal" ? 18 : 39;
+  const inputIconSize =
+    iconSize === "normal" ? NORMAL_ICON_SIZE : LARGE_ICON_SIZE;
 
+  const inputWrapperClassNames = classNames(["base"], { fullWidth });
   const iconWrapperClassNames = classNames(["iconWrapper", iconSize]);
 </script>
 
-<div class="base">
+<div class={inputWrapperClassNames}>
   {#if iconItem}
     <div class={iconWrapperClassNames}>
       <Icon
@@ -36,6 +43,7 @@
     on:change
     on:keydown
     on:keyup
+    on:input
     {id}
     {name}
     {placeholder}
@@ -50,6 +58,10 @@
     border-radius: 5px;
     padding: 12px 16px;
     background: var(--white);
+
+    &.fullWidth {
+      width: 100%;
+    }
   }
 
   input {
@@ -65,7 +77,7 @@
     color: var(--black);
 
     &::placeholder {
-        color: #b3bec7;
+      color: #b3bec7;
     }
   }
 
