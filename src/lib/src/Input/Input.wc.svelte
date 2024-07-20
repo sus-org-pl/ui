@@ -60,7 +60,7 @@
     {name}
     {placeholder}
   />
-  {#if isClearable}
+  {#if isClearable && value}
     <div class="clearBtnWrapper">
       <Icon
         on:click={clearInputValue}

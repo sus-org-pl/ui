@@ -28,6 +28,7 @@
   export let name: string | null = null;
   export let id: string | null = null;
   export let fullWidth: boolean = false;
+  export let isClearable: boolean = false;
 
   export let optionsGenerator: AutocompleteOptionsGeneratorFn;
   export let maximumVisibleOptionsCount: AutocompleteMaximumVisibleOptionsCount =
@@ -64,6 +65,7 @@
     {name}
     {id}
     {fullWidth}
+    {isClearable}
   />
 
   <div class="autocompleteOptions">

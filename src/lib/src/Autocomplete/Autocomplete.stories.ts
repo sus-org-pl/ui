@@ -86,6 +86,7 @@ export const _Autocomplete_In_Form: Story = {
       },
     ],
     clearOptionsOnEmptyValue: true,
+    isClearable: true,
   },
   parameters: {
     backgrounds: {
