@@ -1,4 +1,5 @@
 // Components
+export { default as Autocomplete } from "./src/Autocomplete/Autocomplete.wc.svelte";
 export { default as Alert } from "./src/Alert/Alert.wc.svelte";
 export { default as AppTheme } from "./src/AppTheme/AppTheme.wc.svelte";
 export { default as Avatar } from "./src/Avatar/Avatar.wc.svelte";

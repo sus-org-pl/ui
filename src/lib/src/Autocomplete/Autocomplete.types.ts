@@ -7,7 +7,7 @@ export type AutocompleteOptions =
 
 export type AutocompleteOptionsGeneratorFn = (
   value: string
-) => AutocompleteOptions;
+) => (AutocompleteOptions | Promise<AutocompleteOptions>);
 export type AutocompleteMaximumVisibleOptionsCount =
   (typeof AutocompleteMaximumVisibleOptionsCount)[number];
 export type AutocompleteOptionsTypogprahyType =

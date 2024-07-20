@@ -1,6 +1,7 @@
 <svelte:options customElement="sus-autocomplete" />
 
 <script lang="ts">
+  import cn from "classnames";
   import type { IconItem } from "../Icon/Icon.types";
   import type { InputIconSize } from "../Input/Input.types";
   import Input from "../Input/Input.wc.svelte";
@@ -34,12 +35,12 @@
   export let maximumVisibleOptionsCount: AutocompleteMaximumVisibleOptionsCount =
     DEFAULT_COUNT_OF_AUTOCOMPLETE_ELEMENTS;
   export let clearOptionsOnEmptyValue: boolean = true;
-  export let clearOptionsOnOptionClick: boolean = true;
-  export let optionsTypogprahyType: AutocompleteOptionsTypogprahyType = "body2";
+  export let optionsTypogprahyType: AutocompleteOptionsTypogprahyType =
+    iconSize === "normal" ? "body2" : "body1";
 
   const clearAutocompleteOptions = () => (autocompleteOptions = []);
 
-  const handleInput = (event: Event) => {
+  const handleInput = async (event: Event) => {
     const target = event.target as HTMLInputElement;
 
     if (clearOptionsOnEmptyValue && !target.value) {
@@ -47,11 +48,13 @@
       return;
     }
 
-    autocompleteOptions = optionsGenerator(target.value).slice(
+    autocompleteOptions = (await optionsGenerator(target.value)).slice(
       0,
       maximumVisibleOptionsCount
     );
   };
+
+  const optionsClassNames = cn(["autocompleteOptions", iconSize]);
 </script>
 
 <div class="autocomplete">
@@ -68,7 +71,7 @@
     {isClearable}
   />
 
-  <div class="autocompleteOptions">
+  <div class={optionsClassNames}>
     {#each autocompleteOptions as { label, action, value: optionValue }}
       <div
         class="option"
@@ -98,6 +101,11 @@
     border-radius: 5px;
     width: 100%;
     top: 60px;
+    color: var(--black);
+
+    &.large {
+      top: 80px;
+    }
 
     .option {
       border-bottom: 1px solid var(--gray);
