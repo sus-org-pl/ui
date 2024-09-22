@@ -14,6 +14,7 @@ export { default as Navlink } from "./src/Navlink/Navlink.wc.svelte";
 export { default as NavSection } from "./src/NavSection/NavSection.wc.svelte";
 export { default as NewsfeedCard } from "./src/NewsfeedCard/NewsfeedCard.wc.svelte";
 export { default as Typography } from "./src/Typography/Typography.wc.svelte";
+export { default as PhotoCollage } from "./src/PhotoCollage/PhotoCollage.wc.svelte";
 
 // Prebuilds
 export { default as DonateWidget } from "./src/Widgets/DonateWidget/DonateWidget.wc.svelte";
