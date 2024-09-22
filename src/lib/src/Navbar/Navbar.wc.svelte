@@ -69,6 +69,8 @@
     border-radius: 0 0 8px 8px;
     box-shadow: 0px 4px 8px 3px rgba(0, 0, 0, 10%);
 
+    z-index: 100;
+
     @media (min-width: 768px) {
       padding: 22px 88px;
       justify-content: space-around;
