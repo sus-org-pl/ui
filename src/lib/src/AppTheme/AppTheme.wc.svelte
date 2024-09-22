@@ -147,6 +147,7 @@
       --gray: #5d5e62;
       --blue-gray: #8c94b6;
       --gray-white: #f4f8fb;
+      --gray-white-100: #EEF2F6;
       --blue: #1684d3;
       --yellow: #fdcd18;
       --coral: #f50f3f;
@@ -164,5 +165,4 @@
 
 <style lang="scss">
   @use "./styles/fonts.css";
-  @use "./styles/theme.css";
 </style>
