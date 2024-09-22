@@ -3,15 +3,20 @@
 <script lang="ts">
   import cn from "classnames";
 
-  import { TypogprahyType, TypographyAsComponent } from "./Typography.types";
+  import {
+    TypographyColor,
+    TypogprahyType,
+    TypographyAsComponent,
+  } from "./Typography.types";
 
+  export let color: TypographyColor | undefined = undefined;
   export let type: TypogprahyType;
   export let forceNotCapitalize: boolean = false;
   export let as: TypographyAsComponent = TypographyAsComponent.includes(type)
     ? type
     : "p";
 
-  const classNames = cn(["base", type], {
+  const classNames = cn(["base", type, color], {
     forceNotCapitalize,
   });
 </script>
@@ -25,6 +30,7 @@
 </svelte:element>
 
 <style lang="scss">
+  @use "./styles/colors.scss";
   @use "./styles/types.scss";
 
   .forceNotCapitalize {
