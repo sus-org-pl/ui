@@ -18,6 +18,9 @@
     ".": {
       "types": "./dist/index.d.ts",
       "svelte": "./dist/index.js"
+    },
+    "./breakpoints": {
+      "import": "./dist/scss/breakpoints.scss"
     }
   },
   "files": [
