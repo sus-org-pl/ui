@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Ergonomique';
-    src: url('https://static.umarlestatuty.dev/Ergonomique-Regular.woff2') format('woff2'),
-        url('https://static.umarlestatuty.dev/Ergonomique-Regular.woff') format('woff');
+    src: url('https://s3.engineering.sus.org.pl/Ergonomique-Regular.woff2') format('woff2'),
+        url('https://s3.engineering.sus.org.pl/Ergonomique-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -9,8 +9,8 @@
 
 @font-face {
     font-family: 'Ergonomique';
-    src: url('https://static.umarlestatuty.dev/Ergonomique-Semibold.woff2') format('woff2'),
-        url('https://static.umarlestatuty.dev/Ergonomique-Semibold.woff') format('woff');
+    src: url('https://s3.engineering.sus.org.pl/Ergonomique-Semibold.woff2') format('woff2'),
+        url('https://s3.engineering.sus.org.pl/Ergonomique-Semibold.woff') format('woff');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -18,8 +18,8 @@
 
 @font-face {
     font-family: 'Ergonomique';
-    src: url('https://static.umarlestatuty.dev/Ergonomique-Medium.woff2') format('woff2'),
-        url('https://static.umarlestatuty.dev/Ergonomique-Medium.woff') format('woff');
+    src: url('https://s3.engineering.sus.org.pl/Ergonomique-Medium.woff2') format('woff2'),
+        url('https://s3.engineering.sus.org.pl/Ergonomique-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -27,8 +27,8 @@
 
 @font-face {
     font-family: 'Ergonomique';
-    src: url('https://static.umarlestatuty.dev/Ergonomique-MediumItalic.woff2') format('woff2'),
-        url('https://static.umarlestatuty.dev/Ergonomique-MediumItalic.woff') format('woff');
+    src: url('https://s3.engineering.sus.org.pl/Ergonomique-MediumItalic.woff2') format('woff2'),
+        url('https://s3.engineering.sus.org.pl/Ergonomique-MediumItalic.woff') format('woff');
     font-weight: 500;
     font-style: italic;
     font-display: swap;
@@ -36,8 +36,8 @@
 
 @font-face {
     font-family: 'Ergonomique';
-    src: url('https://static.umarlestatuty.dev/Ergonomique-Bold.woff2') format('woff2'),
-        url('https://static.umarlestatuty.dev/Ergonomique-Bold.woff') format('woff');
+    src: url('https://s3.engineering.sus.org.pl/Ergonomique-Bold.woff2') format('woff2'),
+        url('https://s3.engineering.sus.org.pl/Ergonomique-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
