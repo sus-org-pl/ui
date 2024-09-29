@@ -57,6 +57,8 @@
   @use "./styles/navigation";
   @use "./styles/widgets";
 
+  @import "@sus-org-pl/ui/breakpoints";
+
   .base {
     display: grid;
     grid-template-columns: 1fr;
@@ -65,14 +67,15 @@
     gap: 24px;
     background: var(--white);
     position: absolute;
-    top: 86px;
+    top: 90px;
     left: 0;
     max-width: 100%;
     padding: 22px 88px;
     box-shadow: 0px 4px 8px 3px rgba(0, 0, 0, 10%);
     z-index: 10000;
+    border-radius: 8px;
 
-    @media (min-width: 768px) {
+    @include tablet-up {
       grid-template-columns: repeat(6, 1fr);
       grid-template-rows: 1fr;
     }
