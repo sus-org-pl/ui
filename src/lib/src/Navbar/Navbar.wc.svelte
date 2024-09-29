@@ -20,7 +20,7 @@
   };
 
   onMount(() => {
-    const mediaListener = window.matchMedia("(max-width: 767px)");
+    const mediaListener = window.matchMedia("(max-width: 743px)");
 
     mediaListener.addEventListener("change", mediaQueryHandler);
   });
@@ -56,6 +56,8 @@
 </nav>
 
 <style lang="scss">
+  @import "@sus-org-pl/ui/breakpoints";
+  
   .base {
     display: flex;
     align-items: center;
@@ -71,7 +73,7 @@
 
     z-index: 100;
 
-    @media (min-width: 768px) {
+    @include tablet-up {
       padding: 22px 88px;
       justify-content: space-around;
     }
@@ -84,7 +86,7 @@
   }
 
   .mobileNavToggler {
-    @media (min-width: 768px) {
+    @include tablet-up {
       display: none;
     }
   }
@@ -95,7 +97,7 @@
     justify-content: space-between;
     gap: 120px;
 
-    @media (max-width: 768px) {
+    @include phone-only {
       display: none;
       position: absolute;
       flex-direction: column;
