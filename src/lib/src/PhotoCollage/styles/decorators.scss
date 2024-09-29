@@ -1,3 +1,5 @@
+@import "@sus-org-pl/ui/breakpoints";
+
 .photoCollage {
   div {
     &:nth-of-type(1) {
@@ -13,24 +15,33 @@
       background: transparent;
       height: 30%;
       aspect-ratio: 1 / 1;
-      border: 35px solid var(--yellow);
+      border: 15px solid var(--yellow);
       position: absolute;
-      top: 72%;
+      top: 60%;
       right: 50%;
       z-index: 1;
       transform: translateX(50%);
+
+      @include tablet-lg-up {
+        border-width: 35px;
+        top: 72%;
+      }
     }
 
     &:nth-of-type(3) {
       background: transparent;
       height: 30%;
       aspect-ratio: 1 / 1;
-      border: 35px solid var(--yellow);
+      border: 15px solid var(--yellow);
       border-radius: 100%;
       position: absolute;
       top: 0%;
       left: 10%;
       z-index: 0;
+
+      @include tablet-lg-up {
+        border-width: 35px;
+      }
     }
   }
 }

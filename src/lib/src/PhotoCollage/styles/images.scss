@@ -1,3 +1,5 @@
+@import "@sus-org-pl/ui/breakpoints";
+
 .photoCollage {
   img {
     object-fit: cover;
@@ -11,11 +13,17 @@
 
     &:nth-of-type(2) {
       border-radius: 10px;
-      width: 80%;
+      width: 90%;
       aspect-ratio: 5 / 3;
-      left: 0;
+      left: 5%;
       z-index: 0;
       margin-block-start: -5%;
+      margin-inline-start: -3%;
+
+      @include tablet-lg-up {
+        width: 80%;
+        margin-inline-start: 0;
+      }
     }
 
     &:nth-of-type(3) {
@@ -24,7 +32,11 @@
       aspect-ratio: 1 / 1;
       z-index: 2;
       margin-inline: auto 15%;
-      margin-block-start: -20%;
+      margin-block-start: -12%;
+
+      @include tablet-lg-up {
+        margin-block-start: -20%;
+      }
     }
   }
 
