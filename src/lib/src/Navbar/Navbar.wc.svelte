@@ -109,6 +109,7 @@
         width: 100%;
         left: 0;
         top: 84px;
+        padding-bottom: 32px;
       }
     }
 
