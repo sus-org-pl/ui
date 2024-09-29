@@ -57,7 +57,7 @@
 
 <style lang="scss">
   @import "@sus-org-pl/ui/breakpoints";
-  
+
   .base {
     display: flex;
     align-items: center;
@@ -95,7 +95,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 120px;
+    gap: 20px;
 
     @include phone-only {
       display: none;
@@ -106,6 +106,18 @@
       &.visible {
         display: flex;
       }
+    }
+
+    @include tablet-up {
+      gap: 40px;
+    }
+
+    @include tablet-lg-up {
+      gap: 80px;
+    }
+
+    @include desktop-up {
+      gap: 120px;
     }
   }
 </style>
