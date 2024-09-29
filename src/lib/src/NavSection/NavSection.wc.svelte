@@ -47,7 +47,7 @@
       {/each}
     </div>
   </div>
-  
+
   <div class="endingCard">
     <SmallDonateWidget />
   </div>
@@ -66,18 +66,33 @@
     align-items: center;
     gap: 24px;
     background: var(--white);
-    position: absolute;
     top: 90px;
     left: 0;
     max-width: 100%;
     padding: 22px 88px;
-    box-shadow: 0px 4px 8px 3px rgba(0, 0, 0, 10%);
     z-index: 10000;
     border-radius: 8px;
+
+    @include phone-only {
+      border: {
+        top: 1px solid var(--blue-gray);
+        bottom: 1px solid var(--blue-gray);
+        radius: 0;
+      }
+      text-align: center;
+      padding-top: 0;
+
+      .endingCard,
+      .socialMediaWrapper {
+        display: none;
+      }
+    }
 
     @include tablet-up {
       grid-template-columns: repeat(6, 1fr);
       grid-template-rows: 1fr;
+      position: absolute;
+      box-shadow: 0px 4px 8px 3px rgba(0, 0, 0, 10%);
     }
   }
 </style>

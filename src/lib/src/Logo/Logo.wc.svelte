@@ -13,6 +13,12 @@
   const href = clickable ? "/" : null;
 </script>
 
-<svelte:element this={as} {href} class="base" {role}>
+<svelte:element
+  this={as}
+  {href}
+  class="base"
+  {role}
+  aria-label="Stowarzyszenie Umarłych Statutów"
+>
   {@html LOGO_SVG_ELEMENT({ height, width })}
 </svelte:element>

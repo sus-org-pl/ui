@@ -29,7 +29,7 @@
     sticky,
   });
 
-  const navElementsWrapper = cn(["elementsWrapper"], {
+  $: navElementsWrapperClassNames = cn(["elementsWrapper"], {
     visible: showMobileMenu,
   });
 </script>
@@ -46,7 +46,7 @@
       role="button"
     />
   </div>
-  <ul class={navElementsWrapper}>
+  <ul class={navElementsWrapperClassNames}>
     <slot>
       <li>Link 1</li>
       <li>Link 2</li>
@@ -105,6 +105,10 @@
 
       &.visible {
         display: flex;
+        background: white;
+        width: 100%;
+        left: 0;
+        top: 84px;
       }
     }
 
