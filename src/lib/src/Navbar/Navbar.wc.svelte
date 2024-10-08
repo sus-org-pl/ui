@@ -56,7 +56,7 @@
 </nav>
 
 <style lang="scss">
-  @import "@sus-org-pl/ui/breakpoints";
+  @import "$lib/scss/breakpoints.scss";
 
   .base {
     display: flex;

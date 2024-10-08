@@ -57,7 +57,7 @@
   @use "./styles/navigation";
   @use "./styles/widgets";
 
-  @import "@sus-org-pl/ui/breakpoints";
+  @import "$lib/scss/breakpoints.scss";
 
   .base {
     display: grid;
