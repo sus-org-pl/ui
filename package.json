@@ -3,7 +3,9 @@
   "description": "The official UI library of sus.org.pl",
   "version": "0.0.15",
   "scripts": {
-    "prebuild": "mkdir -p ./dist/scss && cp -r ./src/lib/scss/ ./dist/scss/ && yarn link:self",
+    "prebuild": "npm run prebuild-linux || npm run prebuild-windows",
+    "prebuild-linux": "mkdir -p ./dist/scss && cp -r ./src/lib/scss/ ./dist/scss/ && yarn link:self",
+    "prebuild-windows": "if not exist dist\\scss (mkdir dist\\scss) && xcopy /e /i /h /y src\\lib\\scss dist\\scss && yarn link:self",
     "build": "vite build && npm run package",
     "link:self": "yarn link && yarn link @sus-org-pl/ui",
     "package": "svelte-kit sync && svelte-package && publint",
