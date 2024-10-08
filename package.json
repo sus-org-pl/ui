@@ -3,6 +3,7 @@
   "description": "The official UI library of sus.org.pl",
   "version": "0.0.15",
   "scripts": {
+    "prebuild": "mkdir -p ./dist/scss && cp -r ./src/lib/scss/ ./dist/scss/",
     "build": "vite build && npm run package",
     "package": "svelte-kit sync && svelte-package && publint",
     "prepublishOnly": "npm run package",
