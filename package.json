@@ -13,7 +13,7 @@
     "lint": "prettier --check . && eslint .",
     "format": "prettier --write .",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "yarn build && storybook build",
+    "build-storybook": "yarn build && yarn link:self && storybook build",
     "release": "standard-version && git push --follow-tags && npm publish"
   },
   "exports": {
