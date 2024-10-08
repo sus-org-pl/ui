@@ -5,6 +5,7 @@
   "scripts": {
     "prebuild": "mkdir -p ./dist/scss && cp -r ./src/lib/scss/ ./dist/scss/",
     "build": "vite build && npm run package",
+    "link:self": "yarn link && yarn link @sus-org-pl/ui",
     "package": "svelte-kit sync && svelte-package && publint",
     "prepublishOnly": "npm run package",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
@@ -12,7 +13,7 @@
     "lint": "prettier --check . && eslint .",
     "format": "prettier --write .",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "yarn link && yarn prebuild && storybook build",
+    "build-storybook": "yarn link:self && yarn prebuild && storybook build",
     "release": "standard-version && git push --follow-tags && npm publish"
   },
   "exports": {
