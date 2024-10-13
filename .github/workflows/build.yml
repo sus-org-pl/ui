@@ -1,4 +1,4 @@
-name: Dependency check
+name: Build (node-20)
 
 on:
   push:
