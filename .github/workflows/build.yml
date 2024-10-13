@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  dependency-check:
+  build:
     runs-on: ubuntu-latest
 
     steps:
