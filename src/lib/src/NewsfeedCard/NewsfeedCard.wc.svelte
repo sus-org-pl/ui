@@ -45,6 +45,8 @@
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+    box-shadow: 0px 4px 8.2px 3px #0000001A;
+    flex-shrink: 0;
   }
 
   img {
