@@ -34,6 +34,8 @@ type Story = StoryObj<typeof meta>;
 export const _Newsfeed_Card: Story = {
   args: {
     as: "article",
+    href: "https://sus.org.pl",
+    target: "_blank",
     tag: "Aktualności",
     thumbnailImageSource:
       "https://umarlestatuty.pl/wp-content/uploads/2020/10/Pioro-360x240.jpg",
