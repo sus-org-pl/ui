@@ -55,6 +55,7 @@
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+    height: 100%;
   }
 
   img {
