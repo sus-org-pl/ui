@@ -4,6 +4,9 @@ export const getPaymentLink = async ({
   price,
   campaignId,
   startPaymentEndpoint,
+  firstname,
+  lastname,
+  email,
 }: GetPaymentLinkPayload) => {
   const myHeaders = new Headers();
   myHeaders.append("content-type", "application/json");
@@ -13,9 +16,9 @@ export const getPaymentLink = async ({
     statute: true,
     marketingAgreement: false,
     buyer: {
-      firstName: "Anonimowy",
-      lastName: "Darczyńca",
-      email: "wplaty@umarlestatuty.pl",
+      firstName: firstname || "Anonimowy",
+      lastName: lastname || "Darczyńca",
+      email: email || "wplaty@umarlestatuty.pl",
     },
     price: Number(price),
     campaignId: Number(campaignId),

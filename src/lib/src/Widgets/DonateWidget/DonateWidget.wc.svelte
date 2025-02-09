@@ -22,6 +22,9 @@
     DONATE_WIDGET_SUGGESTED_PRICES;
   export let campaignId: number;
   export let startPaymentEndpoint: string;
+  export let firstname: string | undefined = undefined;
+  export let lastname: string | undefined = undefined;
+  export let email: string | undefined = undefined;
 
   export let as: CardAsComponent = "section";
 </script>
@@ -40,7 +43,14 @@
       {#each suggestedPrices as price}
         <Button
           action={async () =>
-            getPaymentLink({ startPaymentEndpoint, price, campaignId })}
+            getPaymentLink({
+              startPaymentEndpoint,
+              price,
+              campaignId,
+              firstname,
+              lastname,
+              email,
+            })}
           variant="filled"
           color="white"
           size="small"
