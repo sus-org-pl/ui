@@ -72,5 +72,6 @@
   .suggestedPricesWrapper {
     display: flex;
     gap: 18px;
+    flex-wrap: wrap;
   }
 </style>
