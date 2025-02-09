@@ -3,12 +3,19 @@
 .photoCollage {
   img {
     object-fit: cover;
+    transition: 0.25s;
 
     &:nth-of-type(1) {
       border-radius: 100%;
       width: 20%;
       aspect-ratio: 1 / 1;
       z-index: 2;
+
+      @include tablet-lg-up {
+        &:hover {
+          scale: 1.05;
+        }
+      }
     }
 
     &:nth-of-type(2) {
@@ -23,6 +30,10 @@
       @include tablet-lg-up {
         width: 80%;
         margin-inline-start: 0;
+
+        &:hover {
+          scale: 1.02;
+        }
       }
     }
 
@@ -36,6 +47,10 @@
 
       @include tablet-lg-up {
         margin-block-start: -20%;
+
+        &:hover {
+          scale: 1.03;
+        }
       }
     }
   }
