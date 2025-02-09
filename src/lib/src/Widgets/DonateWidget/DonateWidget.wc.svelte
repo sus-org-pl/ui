@@ -11,7 +11,6 @@
     DEFAULT_DONATE_CHOOSE_PRICE_CTA,
     DEFAULT_DONATE_TITLE,
     DONATE_WIDGET_SUGGESTED_PRICES,
-    NGO_CAMPAIGN_ID,
   } from "./DonateWidget.consts";
   import { getPaymentLink } from "./DonateWidget.utils";
   import type { DonateWidgetSuggestedPrices } from "./DonateWidget.types";
@@ -21,13 +20,15 @@
   export let title: string = DEFAULT_DONATE_TITLE;
   export let suggestedPrices: DonateWidgetSuggestedPrices =
     DONATE_WIDGET_SUGGESTED_PRICES;
+  export let campaignId: number;
+  export let startPaymentEndpoint: string;
 
   export let as: CardAsComponent = "section";
 </script>
 
 <Card {as} color="violet" variant="flat">
   <div class="slotWrapper">
-    <Logo height={45} />
+    <Logo color="white" height={45} />
     <Typography type="title" as="p">{title}</Typography>
     <Typography type="body1" as="p">
       {body}
@@ -39,7 +40,7 @@
       {#each suggestedPrices as price}
         <Button
           action={async () =>
-            getPaymentLink({ price, campaignId: NGO_CAMPAIGN_ID })}
+            getPaymentLink({ startPaymentEndpoint, price, campaignId })}
           variant="filled"
           color="white"
           size="small"

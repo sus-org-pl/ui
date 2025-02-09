@@ -1,9 +1,9 @@
-import { NGO_START_PAYMENT_ENDPOINT } from "./DonateWidget.consts";
 import type { GetPaymentLinkPayload } from "./DonateWidget.types";
 
 export const getPaymentLink = async ({
   price,
   campaignId,
+  startPaymentEndpoint,
 }: GetPaymentLinkPayload) => {
   const myHeaders = new Headers();
   myHeaders.append("content-type", "application/json");
@@ -30,7 +30,7 @@ export const getPaymentLink = async ({
   };
 
   try {
-    const response = await fetch(NGO_START_PAYMENT_ENDPOINT, requestOptions);
+    const response = await fetch(startPaymentEndpoint, requestOptions);
     const data = await response.json();
     window.location.href = data.url;
   } catch {
