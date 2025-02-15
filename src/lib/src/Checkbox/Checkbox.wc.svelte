@@ -41,6 +41,8 @@
       height: 25px;
       width: 25px;
       background-color: var(--white);
+      border: 1px solid var(--gray-white-100);
+      border-radius: 4px;
 
       &:after {
         content: "";
