@@ -87,6 +87,13 @@
     transition: 0.3s;
     opacity: 1;
 
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
     @include tablet-up {
       width: auto;
       min-width: 400px;
