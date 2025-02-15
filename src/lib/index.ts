@@ -21,3 +21,7 @@ export { default as PhotoCollage } from "./src/PhotoCollage/PhotoCollage.wc.svel
 // Prebuilds
 export { default as DonateWidget } from "./src/Widgets/DonateWidget/DonateWidget.wc.svelte";
 export { default as SmallDonateWidget } from "./src/Widgets/SmallDonateWidget/SmallDonateWidget.wc.svelte";
+
+// Libs
+export { validateForm } from "./src/Forms/validateForm";
+export type { FormValidationResult } from "./src/Forms/types";
