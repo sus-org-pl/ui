@@ -7,14 +7,16 @@ export const getPaymentLink = async ({
   firstname,
   lastname,
   email,
+  isMarketingConsentAccepted,
+  isTermsOfUseAccepted,
 }: GetPaymentLinkPayload) => {
   const myHeaders = new Headers();
   myHeaders.append("content-type", "application/json");
 
   const raw = JSON.stringify({
     terms: [],
-    statute: true,
-    marketingAgreement: false,
+    statute: isTermsOfUseAccepted,
+    marketingAgreement: isMarketingConsentAccepted,
     buyer: {
       firstName: firstname || "Anonimowy",
       lastName: lastname || "Darczyńca",

@@ -33,6 +33,10 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const _DonateWidget: Story = {
-  args: {},
+  args: {
+    startPaymentEndpoint:
+      "https://api.nowe.platnosci.ngo.pl/Public/campaign/GdqmZr/StartPayment",
+    campaignId: 2771,
+  },
   parameters: {},
 };

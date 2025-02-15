@@ -12,8 +12,8 @@
     DEFAULT_DONATE_TITLE,
     DONATE_WIDGET_SUGGESTED_PRICES,
   } from "./DonateWidget.consts";
-  import { getPaymentLink } from "./DonateWidget.utils";
   import type { DonateWidgetSuggestedPrices } from "./DonateWidget.types";
+  import PaymentDetailsModal from "./PaymentDetailsModal/PaymentDetailsModal.svelte";
 
   export let body: string = DEFAULT_DONATE_BODY;
   export let choosePriceCta: string = DEFAULT_DONATE_CHOOSE_PRICE_CTA;
@@ -25,8 +25,13 @@
   export let firstname: string | undefined = undefined;
   export let lastname: string | undefined = undefined;
   export let email: string | undefined = undefined;
-
   export let as: CardAsComponent = "section";
+
+  $: selectedPrice = 0;
+
+  export let onChoosePrice: (price: number) => void = (price) => {
+    selectedPrice = price;
+  };
 </script>
 
 <Card {as} color="violet" variant="flat">
@@ -42,15 +47,7 @@
     <div class="suggestedPricesWrapper">
       {#each suggestedPrices as price}
         <Button
-          action={async () =>
-            getPaymentLink({
-              startPaymentEndpoint,
-              price,
-              campaignId,
-              firstname,
-              lastname,
-              email,
-            })}
+          action={() => onChoosePrice(Number(price))}
           variant="filled"
           color="white"
           size="small"
@@ -61,6 +58,15 @@
     </div>
   </div>
 </Card>
+
+<PaymentDetailsModal
+  bind:selectedPrice
+  {campaignId}
+  {startPaymentEndpoint}
+  {firstname}
+  {lastname}
+  {email}
+/>
 
 <style>
   .slotWrapper {
