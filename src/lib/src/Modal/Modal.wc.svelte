@@ -3,14 +3,14 @@
 <script lang="ts">
   import Icon from "../Icon/Icon.wc.svelte";
   import Typography from "../Typography/Typography.wc.svelte";
-  import { fade } from 'svelte/transition';
+  import { fade, scale } from "svelte/transition";
 
   export let isOpen: boolean = false;
   export let hideCloseButton: boolean = false;
   export let title: string | undefined = undefined;
   export let titleVariant: "title" | "body1" = "title";
   export let onClose: (() => void) | undefined = undefined;
-  
+
   const closeModal = () => {
     isOpen = false;
     onClose?.();
@@ -19,7 +19,7 @@
 
 {#if isOpen}
   <div class="modalOverlay" transition:fade={{ duration: 200 }}>
-    <div class="modalDialog">
+    <div class="modalDialog" transition:scale={{ duration: 500 }}>
       <div class="header">
         <div>
           {#if title}
@@ -81,7 +81,7 @@
     background: var(--gray-white);
     border: 1px solid var(--gray-white-100);
     border-radius: 8px;
-    transition: .3s;
+    transition: 0.3s;
     opacity: 1;
 
     @include tablet-up {
