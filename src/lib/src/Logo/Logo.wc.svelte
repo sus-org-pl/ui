@@ -6,13 +6,14 @@
   import cn from "classnames";
 
   export let height: string | number;
-  export let clickable: boolean = false;
+  export let clickable: string | boolean = false;
   export let color: "default" | "white" = "default";
 
   const role: AriaRole = clickable ? "button" : "img";
   const width = Math.round(Number(height) * 2.97826086957);
   const as = clickable ? "a" : "div";
-  const href = clickable ? "/" : null;
+  const targetUrl = typeof clickable === "string" ? clickable : "/";
+  const href = clickable ? targetUrl : null;
 
   const classNames = cn(["base"], {
     white: color === "white",
@@ -27,7 +28,7 @@
   aria-label="Stowarzyszenie Umarłych Statutów"
 >
   {#if color === "white"}
-    {@html WHITE_LOGO_SVG_ELEMENT({ height, width, color: "white" })}
+    {@html WHITE_LOGO_SVG_ELEMENT({ height, width })}
   {:else}
     {@html LOGO_SVG_ELEMENT({ height, width })}
   {/if}
