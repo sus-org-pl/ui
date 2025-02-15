@@ -52,11 +52,16 @@
       await redirectToPayment();
     }
   };
+
+  const onModalClose = () => {
+    selectedPrice = 0;
+    errors = {};
+  };
 </script>
 
 <Modal
   isOpen={selectedPrice > 0}
-  onClose={() => (selectedPrice = 0)}
+  onClose={onModalClose}
   title="Już prawie gotowe"
 >
   <div class="contentWrapper">

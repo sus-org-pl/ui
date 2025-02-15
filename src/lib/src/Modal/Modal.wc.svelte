@@ -64,11 +64,12 @@
     align-items: center;
     justify-content: center;
     background: #00000073;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100dvh;
     width: 100dvw;
+    z-index: 1000;
   }
 
   .modalDialog {
