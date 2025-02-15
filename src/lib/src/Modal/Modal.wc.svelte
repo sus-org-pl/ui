@@ -78,6 +78,8 @@
     gap: 24px;
     padding: 24px;
     width: 90dvw;
+    max-height: 90dvh;
+    overflow-y: scroll;
 
     background: var(--gray-white);
     border: 1px solid var(--gray-white-100);
@@ -89,6 +91,7 @@
       width: auto;
       min-width: 400px;
       max-width: 65dvw;
+      max-height: 80dvh;
     }
   }
 

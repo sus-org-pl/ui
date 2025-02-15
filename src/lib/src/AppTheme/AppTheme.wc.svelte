@@ -153,6 +153,7 @@
       --coral: #f50f3f;
       --violet: #6300c7;
       --white: #ffffff;
+      --danger: #ed0637;
     }
 
     .susThemedApp,

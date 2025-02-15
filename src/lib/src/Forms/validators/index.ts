@@ -1,13 +1,13 @@
 export class Validators {
   static email(input: string): boolean {
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailPattern.test(input);
+    return emailPattern.test(input.trim());
   }
 
   static name(input: string): boolean {
     const nameRegex =
       /^[A-Za-zŁŚĆŻŹŃÓĘĄłśćżźńóęą]+(?:[-\s][A-Za-zŁŚĆŻŹŃÓĘĄłśćżźńóęą]+)*$/;
-    return nameRegex.test(input);
+    return nameRegex.test(input.trim());
   }
 
   static phone(input: string): boolean {

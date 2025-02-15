@@ -71,18 +71,21 @@
     </Typography>
     <div class="formLayout">
       <Input
+        name="firstname"
         outlined
         placeholder="Imię"
         bind:value={firstnameValue}
         errorMessage={errors["firstnameValue"]}
       />
       <Input
+        name="lastname"
         outlined
         placeholder="Nazwisko"
         bind:value={lastnameValue}
         errorMessage={errors["lastnameValue"]}
       />
       <Input
+        name="email"
         outlined
         placeholder="Adres e-mail"
         bind:value={emailValue}
@@ -98,9 +101,11 @@
       bind:checked={marketingAgreementValue}
       label="Zapoznałem się z treścią klauzulii informacyjnej i wyrażam zgodę na umieszczenie moich danych osobowych w bazie organizacji oraz otrzymywanie informacji o jej działaniach."
     />
-    <Button action={onFormSubmit} variant="filled" color="yellow" size="small">
-      Przejdź do płatności ({selectedPrice} PLN)
-    </Button>
+    <div class="paymentButtonWrapper">
+      <Button action={onFormSubmit} variant="filled" color="yellow" size="small">
+        Przejdź do płatności ({selectedPrice} PLN)
+      </Button>
+    </div>
   </div>
 </Modal>
 
@@ -122,7 +127,11 @@
 
     @include tablet-up {
       grid-template-columns: repeat(2, 1fr);
-      grid-auto-rows: 1fr;
+      grid-auto-rows: max-content;
     }
+  }
+
+  .paymentButtonWrapper {
+    display: flex;
   }
 </style>
