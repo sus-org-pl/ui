@@ -5,19 +5,33 @@
 
   export let label: string | undefined = undefined;
   export let checked: boolean = false;
+  export let errorMessage: string | null = null;
 </script>
 
-<label class="container">
-  {#if label}
-    <Typography type="body2" as="span">
-      {label}
+<div class="componentWrapper">
+  <label class="container">
+    {#if label}
+      <Typography type="body2" as="span">
+        {label}
+      </Typography>
+    {/if}
+    <input on:change bind:checked type="checkbox" />
+    <span class="checkmark"></span>
+  </label>
+  {#if errorMessage}
+    <Typography type="small" as="span" color="danger">
+      {errorMessage}
     </Typography>
   {/if}
-  <input on:change bind:checked type="checkbox" />
-  <span class="checkmark"></span>
-</label>
+</div>
 
 <style lang="scss">
+  .componentWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
   .container {
     display: flex;
     align-items: center;
