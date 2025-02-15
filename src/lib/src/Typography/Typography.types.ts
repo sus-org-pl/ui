@@ -28,6 +28,7 @@ export const TypographyColor = [
   "coral",
   "violet",
   "white",
+  "danger",
 ] as const;
 
 export type TypographyAsComponent = (typeof TypographyAsComponent)[number];
