@@ -1,3 +1,5 @@
+<svelte:options customElement="sus-checkbox" />
+
 <script lang="ts">
   import Typography from "../Typography/Typography.wc.svelte";
 
@@ -24,7 +26,7 @@
     cursor: pointer;
     font-size: 22px;
     user-select: none;
-    min-height: 25px;
+    min-height: 27px;
 
     input {
       position: absolute;

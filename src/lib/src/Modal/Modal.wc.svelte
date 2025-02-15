@@ -1,3 +1,5 @@
+<svelte:options customElement="sus-modal" />
+
 <script lang="ts">
   import Icon from "../Icon/Icon.wc.svelte";
   import Typography from "../Typography/Typography.wc.svelte";
