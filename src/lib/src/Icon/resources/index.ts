@@ -8,6 +8,7 @@ import facebook from "./_facebook";
 import hamburger from "./_hamburger";
 import instagram from "./_instagram";
 import lifebelt from "./_lifebelt";
+import linkedin from "./_linkedin";
 import megaphone from "./_megaphone";
 import search from "./_search";
 import student from "./_student";
@@ -24,6 +25,7 @@ const resources = {
   hamburger,
   instagram,
   lifebelt,
+  linkedin,
   megaphone,
   search,
   student,
