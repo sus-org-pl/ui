@@ -14,12 +14,15 @@
   } from "./DonateWidget.consts";
   import type { DonateWidgetSuggestedPrices } from "./DonateWidget.types";
   import PaymentDetailsModal from "./PaymentDetailsModal/PaymentDetailsModal.svelte";
+  import Input from "$lib/src/Input/Input.wc.svelte";
+  import { slide } from "svelte/transition";
 
   export let body: string = DEFAULT_DONATE_BODY;
   export let choosePriceCta: string = DEFAULT_DONATE_CHOOSE_PRICE_CTA;
   export let title: string = DEFAULT_DONATE_TITLE;
   export let suggestedPrices: DonateWidgetSuggestedPrices =
     DONATE_WIDGET_SUGGESTED_PRICES;
+  export let isCustomPriceAllowed: boolean = true;
   export let campaignId: number;
   export let startPaymentEndpoint: string;
   export let firstname: string | undefined = undefined;
@@ -27,15 +30,22 @@
   export let email: string | undefined = undefined;
   export let as: CardAsComponent = "section";
 
-  $: selectedPrice = 0;
+  let customPrice = "";
 
-  export let onChoosePrice: (price: number) => void = (price) => {
+  $: selectedPrice = 0;
+  $: isCustomPriceBoxVisible = false;
+
+  const onChoosePrice: (price: number) => void = (price) => {
     selectedPrice = price;
+  };
+
+  const onCustomPriceClick: () => void = () => {
+    isCustomPriceBoxVisible = true;
   };
 </script>
 
 <Card {as} color="violet" variant="flat">
-  <div class="slotWrapper">
+  <div class="slotWrapper" transition:slide>
     <Logo color="white" height={45} />
     <Typography type="title" as="p">{title}</Typography>
     <Typography type="body1" as="p">
@@ -44,7 +54,7 @@
     <Typography type="button" as="p" forceNotCapitalize>
       {choosePriceCta}
     </Typography>
-    <div class="suggestedPricesWrapper">
+    <div class:hidden={isCustomPriceBoxVisible} class="suggestedPricesWrapper">
       {#each suggestedPrices as price}
         <Button
           action={() => onChoosePrice(Number(price))}
@@ -55,6 +65,26 @@
           {price} PLN
         </Button>
       {/each}
+      {#if isCustomPriceAllowed}
+        <Button
+          action={onCustomPriceClick}
+          variant="outlined"
+          color="white"
+          size="small"
+        >
+          Inna
+        </Button>
+      {/if}
+    </div>
+    <div class:hidden={!isCustomPriceBoxVisible} class="customPriceBox">
+      <Input placeholder="Wpisz kwotę" fullHeight bind:value={customPrice} />
+      <Button
+        action={() => onChoosePrice(Number(customPrice))}
+        variant="filled"
+        color="white"
+        size="small"
+        >Wpłać
+      </Button>
     </div>
   </div>
 </Card>
@@ -79,5 +109,16 @@
     display: flex;
     gap: 18px;
     flex-wrap: wrap;
+  }
+
+  .customPriceBox {
+    display: flex;
+    gap: 12px;
+    min-height: 56px;
+    max-width: 300px;
+  }
+
+  .hidden {
+    display: none;
   }
 </style>
