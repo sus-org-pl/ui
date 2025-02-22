@@ -24,6 +24,7 @@
   export let value: string;
   export let outlined: boolean = false;
   export let fullWidth: boolean = false;
+  export let fullHeight: boolean = false;
   export let isClearable: boolean = false;
   export let errorMessage: string | null = null;
 
@@ -33,7 +34,7 @@
     iconSize === "normal" ? NORMAL_ICON_SIZE * 0.8 : NORMAL_ICON_SIZE;
 
   const componentWrapperClassNames = classNames(["wrapper"], { fullWidth });
-  const inputWrapperClassNames = classNames(["base"], { outlined, fullWidth });
+  const inputWrapperClassNames = classNames(["base"], { outlined, fullWidth, fullHeight });
   const iconWrapperClassNames = classNames(["iconWrapper", iconSize]);
 
   const clearInputValue = () => {
@@ -106,6 +107,10 @@
 
     &.fullWidth {
       width: 100%;
+    }
+
+    &.fullHeight {
+      height: 100%;
     }
   }
 
