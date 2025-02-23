@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.28](https://github.com/sus-org-pl/ui/compare/v0.0.27...v0.0.28) (2025-02-23)
+
+
+### Features
+
+* **donates:** added caps pattern to donation widget ([1d47fe6](https://github.com/sus-org-pl/ui/commit/1d47fe6c05a81a479e630ccac17055401409f3e0))
+
 ### [0.0.27](https://github.com/sus-org-pl/ui/compare/v0.0.26...v0.0.27) (2025-02-22)
 
 ### [0.0.26](https://github.com/sus-org-pl/ui/compare/v0.0.25...v0.0.26) (2025-02-20)
