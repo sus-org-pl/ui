@@ -15,7 +15,8 @@
   import type { DonateWidgetSuggestedPrices } from "./DonateWidget.types";
   import PaymentDetailsModal from "./PaymentDetailsModal/PaymentDetailsModal.svelte";
   import Input from "$lib/src/Input/Input.wc.svelte";
-  import { slide } from "svelte/transition";
+
+  import SUSCapsPattern from "./assets/sus_caps_pattern.svg";
 
   export let body: string = DEFAULT_DONATE_BODY;
   export let choosePriceCta: string = DEFAULT_DONATE_CHOOSE_PRICE_CTA;
@@ -29,6 +30,7 @@
   export let lastname: string | undefined = undefined;
   export let email: string | undefined = undefined;
   export let as: CardAsComponent = "section";
+  export let isCapsPatternVisible: boolean = false;
 
   let customPrice = "";
 
@@ -42,10 +44,14 @@
   const onCustomPriceClick: () => void = () => {
     isCustomPriceBoxVisible = true;
   };
+
+  const style = isCapsPatternVisible
+    ? `background: url(${SUSCapsPattern}) repeat`
+    : "";
 </script>
 
 <Card {as} color="violet" variant="flat">
-  <div class="slotWrapper" transition:slide>
+  <div class="slotWrapper" {style}>
     <Logo color="white" height={45} />
     <Typography type="title" as="p">{title}</Typography>
     <Typography type="body1" as="p">
@@ -83,7 +89,7 @@
         variant="filled"
         color="white"
         size="small"
-        >Wpłać
+        >Wpłacam
       </Button>
     </div>
   </div>
@@ -115,7 +121,7 @@
     display: flex;
     gap: 12px;
     min-height: 56px;
-    max-width: 300px;
+    max-width: 320px;
   }
 
   .hidden {
