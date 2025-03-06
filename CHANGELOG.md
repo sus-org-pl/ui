@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.31](https://github.com/sus-org-pl/ui/compare/v0.0.30...v0.0.31) (2025-03-06)
+
+
+### Features
+
+* **cards:** added hover effect for article's card ([71f63a5](https://github.com/sus-org-pl/ui/commit/71f63a55a7664aa321627cab1c76156f9fdf7464))
+
 ### [0.0.30](https://github.com/sus-org-pl/ui/compare/v0.0.29...v0.0.30) (2025-03-06)
 
 

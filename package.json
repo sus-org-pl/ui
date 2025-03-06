@@ -1,7 +1,7 @@
 {
   "name": "@sus-org-pl/ui",
   "description": "The official UI library of sus.org.pl",
-  "version": "0.0.30",
+  "version": "0.0.31",
   "scripts": {
     "build": "vite build && npm run package",
     "link:self": "yarn link && yarn link @sus-org-pl/ui",
