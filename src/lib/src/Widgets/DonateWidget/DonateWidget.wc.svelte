@@ -12,7 +12,10 @@
     DEFAULT_DONATE_TITLE,
     DONATE_WIDGET_SUGGESTED_PRICES,
   } from "./DonateWidget.consts";
-  import type { DonateWidgetSuggestedPrices } from "./DonateWidget.types";
+  import type {
+    DonateWidgetSuggestedPrices,
+    ServiceTermsAndConditionsDocument,
+  } from "./DonateWidget.types";
   import PaymentDetailsModal from "./PaymentDetailsModal/PaymentDetailsModal.svelte";
   import Input from "$lib/src/Input/Input.wc.svelte";
 
@@ -23,6 +26,8 @@
   export let title: string = DEFAULT_DONATE_TITLE;
   export let suggestedPrices: DonateWidgetSuggestedPrices =
     DONATE_WIDGET_SUGGESTED_PRICES;
+  export let serviceTermsAndConditionsDocs: ServiceTermsAndConditionsDocument[] =
+    [];
   export let isCustomPriceAllowed: boolean = true;
   export let campaignId: number;
   export let startPaymentEndpoint: string;
@@ -102,6 +107,7 @@
   {firstname}
   {lastname}
   {email}
+  {serviceTermsAndConditionsDocs}
 />
 
 <style>

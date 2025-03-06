@@ -5,6 +5,7 @@
   import Input from "$lib/src/Input/Input.wc.svelte";
   import Modal from "$lib/src/Modal/Modal.wc.svelte";
   import Typography from "$lib/src/Typography/Typography.wc.svelte";
+  import type { ServiceTermsAndConditionsDocument } from "../DonateWidget.types";
   import { getPaymentLink } from "../DonateWidget.utils";
   import { validatePaymentForm } from "./PaymentDetailsModal.utils";
 
@@ -14,6 +15,8 @@
   export let lastname: string | undefined = undefined;
   export let email: string | undefined = undefined;
   export let selectedPrice: number = 0;
+  export let serviceTermsAndConditionsDocs: ServiceTermsAndConditionsDocument[] =
+    [];
 
   let firstnameValue = firstname || "";
   let lastnameValue = lastname || "";
@@ -102,10 +105,30 @@
       label="Zapoznałem się z treścią klauzulii informacyjnej i wyrażam zgodę na umieszczenie moich danych osobowych w bazie organizacji oraz otrzymywanie informacji o jej działaniach."
     />
     <div class="paymentButtonWrapper">
-      <Button action={onFormSubmit} variant="filled" color="yellow" size="small">
+      <Button
+        action={onFormSubmit}
+        variant="filled"
+        color="yellow"
+        size="small"
+      >
         Przejdź do płatności ({selectedPrice} PLN)
       </Button>
     </div>
+    {#if serviceTermsAndConditionsDocs}
+      <Typography type="small">
+        Przed przejściem dalej, zapoznaj się z dokumentami:
+        {#each serviceTermsAndConditionsDocs as doc}
+          <Typography
+            type="small"
+            as="a"
+            color="blue"
+            restProps={{ href: doc.url, target: "_blank" }}
+          >
+            {doc.name}{#if doc !== serviceTermsAndConditionsDocs[serviceTermsAndConditionsDocs.length - 1]},{:else}.{/if}
+          </Typography>
+        {/each}
+      </Typography>
+    {/if}
   </div>
 </Modal>
 
@@ -133,5 +156,10 @@
 
   .paymentButtonWrapper {
     display: flex;
+  }
+
+  .link {
+    text-decoration: none;
+    color: var(--blue);
   }
 </style>

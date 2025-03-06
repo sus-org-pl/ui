@@ -37,6 +37,13 @@ export const _DonateWidget: Story = {
     startPaymentEndpoint:
       "https://api.nowe.platnosci.ngo.pl/Public/campaign/GdqmZr/StartPayment",
     campaignId: 2771,
+    serviceTermsAndConditionsDocs: [
+      {
+        name: "polityka prywatności",
+        url: "https://www.ngo.pl/polityka-prywatnosci",
+      },
+      { name: "regulamin wpłat", url: "https://www.ngo.pl/regulamin" },
+    ],
   },
   parameters: {},
 };

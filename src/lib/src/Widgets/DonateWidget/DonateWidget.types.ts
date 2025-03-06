@@ -11,3 +11,8 @@ export interface GetPaymentLinkPayload {
 }
 
 export type DonateWidgetSuggestedPrices = (number | string)[];
+
+export interface ServiceTermsAndConditionsDocument {
+  name: string;
+  url: string;
+}
