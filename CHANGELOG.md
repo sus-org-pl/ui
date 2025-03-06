@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.30](https://github.com/sus-org-pl/ui/compare/v0.0.29...v0.0.30) (2025-03-06)
+
+
+### Features
+
+* **donates:** added ability to define documents urls ([cf8835c](https://github.com/sus-org-pl/ui/commit/cf8835c0287c789799c8f3035064be14a0030c1a))
+* **typography:** added ability to pass props to typography ([0eb513d](https://github.com/sus-org-pl/ui/commit/0eb513dbdb8df757eb026b12a0dd5a9d41559d39))
+
 ### [0.0.29](https://github.com/sus-org-pl/ui/compare/v0.0.28...v0.0.29) (2025-02-27)
 
 ### [0.0.28](https://github.com/sus-org-pl/ui/compare/v0.0.27...v0.0.28) (2025-02-23)
