@@ -56,12 +56,19 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+
+    &:hover {
+      img {
+        filter: brightness(0.6);
+      }
+    }
   }
 
   img {
     height: 140px;
     object-fit: cover;
     border-radius: 5px;
+    transition: .5s;
   }
 
   .contentWrapper {
