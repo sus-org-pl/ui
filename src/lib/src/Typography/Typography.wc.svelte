@@ -15,13 +15,14 @@
   export let as: TypographyAsComponent = TypographyAsComponent.includes(type)
     ? type
     : "p";
+  export let restProps: Record<string, unknown> = {};
 
   const classNames = cn(["base", type, color], {
     forceNotCapitalize,
   });
 </script>
 
-<svelte:element this={as} class={classNames}>
+<svelte:element this={as} class={classNames} {...restProps}>
   <slot>
     Stowarzyszenie Umarłych Statutów działa na rzecz praw ucznia. Zbyt często w
     życiu podążamy utartymi ścieżkami, zapominając, że można iść inaczej. Każdy
@@ -32,6 +33,10 @@
 <style lang="scss">
   @use "./styles/colors.scss";
   @use "./styles/types.scss";
+
+  .base {
+    text-decoration: none;
+  }
 
   .forceNotCapitalize {
     text-transform: none;
