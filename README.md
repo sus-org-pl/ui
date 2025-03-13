@@ -4,20 +4,13 @@ A UI component library for Stowarzyszenie Umarłych Statutów, built with Svelte
 
 ## Install into another project
 
-To use this library, you need to authenticate with GitHub's NPM registry. Add the following to your project's .npmrc file:
-
-```
-@sus-org-pl:registry=https://npm.pkg.github.com
-//npm.pkg.github.com/:_authToken=${SUS_REGISTRY_TOKEN}
-```
-
-Then, install the package:
+To use this library, install the package:
 
 ```bash
 yarn add @sus-org-pl/ui
 ```
 
-## Usage in another project
+## Usage in project
 
 Import components into your SvelteKit project:
 
@@ -49,6 +42,10 @@ Run the development server:
 ```bash
 yarn storybook
 ```
+
+## Commit Convention
+
+We use Conventional Commits for all commit messages. This helps maintain a standardized commit history and facilitates automated versioning and changelog generation.
 
 ## Publishing
 
