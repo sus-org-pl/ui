@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/sus-org-pl/ui/compare/v0.0.31...v1.1.0) (2025-03-15)
+
+
+### Features
+
+* **forms:** added error handling to autocomplete ([2d4bdbf](https://github.com/sus-org-pl/ui/commit/2d4bdbfa124473cef5ec238f9de2b036785a0a33))
+
 ### [0.0.31](https://github.com/sus-org-pl/ui/compare/v0.0.30...v0.0.31) (2025-03-06)
 
 
