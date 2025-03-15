@@ -28,8 +28,11 @@
   export let placeholder: string = "";
   export let name: string | null = null;
   export let id: string | null = null;
+  export let outlined: boolean = false;
   export let fullWidth: boolean = false;
+  export let fullHeight: boolean = false;
   export let isClearable: boolean = false;
+  export let errorMessage: string | null = null;
 
   export let optionsGenerator: AutocompleteOptionsGeneratorFn;
   export let maximumVisibleOptionsCount: AutocompleteMaximumVisibleOptionsCount =
@@ -69,6 +72,9 @@
     {id}
     {fullWidth}
     {isClearable}
+    {outlined}
+    {fullHeight}
+    {errorMessage}
   />
 
   {#if autocompleteOptions.length}
