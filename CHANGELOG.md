@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.2](https://github.com/sus-org-pl/ui/compare/v1.1.0...v1.1.2) (2025-03-15)
+
+
+### Bug Fixes
+
+* **forms:** clearing autocomplete suggestion after choosing value ([b5d9703](https://github.com/sus-org-pl/ui/commit/b5d970304f9d1e7fd6cb5dc694d97befc1885dcd))
+
 ## [1.1.0](https://github.com/sus-org-pl/ui/compare/v0.0.31...v1.1.0) (2025-03-15)
 
 
