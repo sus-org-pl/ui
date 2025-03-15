@@ -57,6 +57,15 @@
     );
   };
 
+  const handleAction = (action?: (() => void), optionValue?: string) => {
+    if (action) {
+      action();
+    } else {
+      value = optionValue || "";
+      clearAutocompleteOptions();
+    }
+  }
+
   const optionsClassNames = cn(["autocompleteOptions", iconSize]);
 </script>
 
@@ -85,10 +94,8 @@
           role="option"
           aria-selected={false}
           tabindex={0}
-          on:click={action ? () => action() : () => (value = optionValue || "")}
-          on:keydown={action
-            ? () => action()
-            : () => (value = optionValue || "")}
+          on:click={() => handleAction(action, optionValue)}
+          on:keydown={() => handleAction(action, optionValue)}
         >
           <Typography type={optionsTypogprahyType}>
             {label}
