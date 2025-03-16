@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/sus-org-pl/ui/compare/v1.1.2...v1.2.0) (2025-03-16)
+
+
+### Features
+
+* **forms:** animation for autocomplete options ([1a310f5](https://github.com/sus-org-pl/ui/commit/1a310f588e2442f549f891076999c3214388c5c5))
+
 ### [1.1.2](https://github.com/sus-org-pl/ui/compare/v1.1.0...v1.1.2) (2025-03-15)
 
 
