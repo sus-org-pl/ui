@@ -2,6 +2,8 @@
 
 <script lang="ts">
   import cn from "classnames";
+  import { slide } from "svelte/transition";
+
   import type { IconItem } from "../Icon/Icon.types";
   import type { InputIconSize } from "../Input/Input.types";
   import Input from "../Input/Input.wc.svelte";
@@ -87,7 +89,7 @@
   />
 
   {#if autocompleteOptions.length}
-    <div class={optionsClassNames}>
+    <div class={optionsClassNames} transition:slide>
       {#each autocompleteOptions as { label, action, value: optionValue }}
         <div
           class="option"
@@ -115,6 +117,7 @@
   .autocompleteOptions {
     position: absolute;
     top: 60px;
+    z-index: 1;
     border-radius: 5px;
     width: 100%;
 
