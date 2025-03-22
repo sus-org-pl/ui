@@ -4,7 +4,6 @@
   "version": "1.2.0",
   "scripts": {
     "build": "vite build && npm run package",
-    "link:self": "yarn link && yarn link @sus-org-pl/ui",
     "package": "svelte-kit sync && svelte-package && publint",
     "prepublishOnly": "npm run package",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
