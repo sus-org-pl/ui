@@ -1,0 +1,28 @@
+.base {
+  &.small {
+    border-radius: 4px;
+
+    &,
+    * {
+      height: 3px;
+    }
+  }
+
+  &.medium {
+    border-radius: 6px;
+
+    &,
+    * {
+      height: 6px;
+    }
+  }
+
+  &.large {
+    border-radius: 8px;
+    
+    &,
+    * {
+      height: 10px;
+    }
+  }
+}

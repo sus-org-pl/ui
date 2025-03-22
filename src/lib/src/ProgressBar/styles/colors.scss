@@ -1,0 +1,9 @@
+.base {
+  &.yellow * {
+    background: var(--yellow);
+  }
+
+  &.violet * {
+    background: var(--violet);
+  }
+}
