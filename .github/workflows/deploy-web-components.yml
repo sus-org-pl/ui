@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
 
 jobs:
   build-and-deploy:
@@ -31,39 +28,62 @@ jobs:
     - name: List generated files
       run: ls -la web-components-build/
 
-    - name: Configure AWS CLI for Cloudflare R2
-      if: github.ref == 'refs/heads/main'
+    - name: Install rclone
       run: |
-        aws configure set aws_access_key_id ${{ secrets.R2_ACCESS_KEY_ID }}
-        aws configure set aws_secret_access_key ${{ secrets.R2_SECRET_ACCESS_KEY }}
-        aws configure set region auto
+        curl https://rclone.org/install.sh | sudo bash
 
-    - name: Upload to Cloudflare R2
-      if: github.ref == 'refs/heads/main'
+    - name: Configure rclone for Cloudflare R2
       run: |
-        # Upload all files from web-components-build directory
-        aws s3 cp web-components-build/ s3://${{ secrets.R2_BUCKET_NAME }}/web-components/ \
-          --recursive \
-          --endpoint-url ${{ secrets.R2_ENDPOINT }} \
-          --cache-control "max-age=31536000, immutable" \
-          --acl public-read
-        
-        # Optional: You might want to upload the latest version to a known path
+        mkdir -p ~/.config/rclone
+        cat <<EOF > ~/.config/rclone/rclone.conf
+        [r2]
+        type = s3
+        provider = Cloudflare
+        access_key_id = ${{ secrets.R2_ACCESS_KEY_ID }}
+        secret_access_key = ${{ secrets.R2_SECRET_ACCESS_KEY }}
+        endpoint = ${{ secrets.R2_ENDPOINT }}
+        acl = public-read
+        EOF
+
+    - name: Upload new version file to Cloudflare R2
+      run: |
+        echo "Uploading entire build directory..."
+        rclone copy web-components-build/ r2:/web-components/ \
+        --s3-acl public-read \
+        --header-upload "Cache-Control: max-age=31536000, immutable" \
+        --progress \
+        --retries 10 \
+        --low-level-retries 20 \
+        --s3-chunk-size 8M \
+        --s3-upload-cutoff 8M
+      
+    - name: Upload new latest.js file to Cloudflare R2
+      run: |
         VERSION=$(node -p "require('./package.json').version")
+        echo "Detected version: $VERSION"
         LATEST_FILE=$(find web-components-build -name "web-components-v*.js" -not -name "*.map" | head -n 1)
-        
+    
         if [ -n "$LATEST_FILE" ]; then
-          aws s3 cp $LATEST_FILE s3://${{ secrets.R2_BUCKET_NAME }}/web-components/latest.js \
-            --endpoint-url ${{ secrets.R2_ENDPOINT }} \
-            --cache-control "max-age=3600" \
-            --acl public-read
+            echo "Deleting existing latest.js if it exists..."
+            rclone deletefile r2:/web-components/latest.js || echo "latest.js did not exist, continuing"
+    
+            echo "Uploading $LATEST_FILE as latest.js..."
+            rclone copyto "$LATEST_FILE" r2:/web-components/latest.js \
+                --s3-acl public-read \
+                --header-upload "Cache-Control: max-age=3600" \
+                --progress \
+                --retries 10 \
+                --low-level-retries 20 \
+                --s3-chunk-size 8M \
+                --s3-upload-cutoff 8M
+        else
+            echo "No build file found for latest.js!"
+            exit 1
         fi
 
     - name: Output deployment URL
-      if: github.ref == 'refs/heads/main'
       run: |
         VERSION=$(node -p "require('./package.json').version")
         echo "Web components deployed to:"
-        echo "Versioned: https://example.r2.dev/web-components/web-components-v${VERSION}.js"
-        echo "Latest: https://example.r2.dev/web-components/latest.js"
-        
+        echo "Versioned: https://${{ vars.R2_PUBLIC_DOMAIN }}/web-components/web-components-v${VERSION}.js"
+        echo "Latest: https://${{ vars.R2_PUBLIC_DOMAIN }}/web-components/latest.js"
