@@ -36,6 +36,7 @@
 
   .base {
     text-decoration: none;
+    margin: 0;
   }
 
   .forceNotCapitalize {
