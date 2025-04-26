@@ -37,6 +37,16 @@
   export let as: CardAsComponent = "section";
   export let isCapsPatternVisible: boolean = false;
 
+  /** For WebComponents use */
+  export let termsUrl: string | undefined = undefined;
+
+  if (termsUrl) {
+    serviceTermsAndConditionsDocs.push({
+      url: termsUrl,
+      name: "regulamin wpłat",
+    });
+  }
+
   let customPrice = "";
 
   $: selectedPrice = 0;
