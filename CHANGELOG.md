@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/sus-org-pl/ui/compare/v1.3.0...v1.4.0) (2025-04-26)
+
+
+### Features
+
+* **typography:** added default margin set to 0 ([0add373](https://github.com/sus-org-pl/ui/commit/0add373ae6ebfc53b121dcb8cac75f4b43d44820))
+
 ## [1.3.0](https://github.com/sus-org-pl/ui/compare/v1.2.0...v1.3.0) (2025-03-22)
 
 
