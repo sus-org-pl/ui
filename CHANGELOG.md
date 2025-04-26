@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/sus-org-pl/ui/compare/v1.4.0...v1.5.0) (2025-04-26)
+
+
+### Features
+
+* **donations:** added param to set terms of service in web component ([4fbfd43](https://github.com/sus-org-pl/ui/commit/4fbfd4373c3fb223dec8e7325a2de9fe2ab4d3f9))
+
 ## [1.4.0](https://github.com/sus-org-pl/ui/compare/v1.3.0...v1.4.0) (2025-04-26)
 
 
