@@ -1,0 +1,76 @@
+name: Build & Deploy Web Components
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'
+        cache: 'yarn'
+
+    - name: Install dependencies
+      run: yarn
+
+    - name: Build web components
+      run: yarn build:webcomponents
+
+    - name: List generated files
+      run: ls -la web-components-build/
+
+    - name: Install AWS CLI
+      if: github.ref == 'refs/heads/main'
+      run: |
+        curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+        unzip awscliv2.zip
+        sudo ./aws/install
+
+    - name: Configure AWS CLI for Cloudflare R2
+      if: github.ref == 'refs/heads/main'
+      run: |
+        aws configure set aws_access_key_id ${{ secrets.R2_ACCESS_KEY_ID }}
+        aws configure set aws_secret_access_key ${{ secrets.R2_SECRET_ACCESS_KEY }}
+        aws configure set region auto
+
+    - name: Upload to Cloudflare R2
+      if: github.ref == 'refs/heads/main'
+      run: |
+        # Upload all files from web-components-build directory
+        aws s3 cp web-components-build/ s3://${{ secrets.R2_BUCKET_NAME }}/web-components/ \
+          --recursive \
+          --endpoint-url ${{ secrets.R2_ENDPOINT }} \
+          --cache-control "max-age=31536000, immutable" \
+          --acl public-read
+        
+        # Optional: You might want to upload the latest version to a known path
+        VERSION=$(node -p "require('./package.json').version")
+        LATEST_FILE=$(find web-components-build -name "web-components-v*.js" -not -name "*.map" | head -n 1)
+        
+        if [ -n "$LATEST_FILE" ]; then
+          aws s3 cp $LATEST_FILE s3://${{ secrets.R2_BUCKET_NAME }}/web-components/latest.js \
+            --endpoint-url ${{ secrets.R2_ENDPOINT }} \
+            --cache-control "max-age=3600" \
+            --acl public-read
+        fi
+
+    - name: Output deployment URL
+      if: github.ref == 'refs/heads/main'
+      run: |
+        VERSION=$(node -p "require('./package.json').version")
+        echo "Web components deployed to:"
+        echo "Versioned: https://example.r2.dev/web-components/web-components-v${VERSION}.js"
+        echo "Latest: https://example.r2.dev/web-components/latest.js"
+        
