@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true" />
   <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Ubuntu:wght@500;700&display=swap"
     rel="stylesheet"
   />
 
@@ -147,7 +147,7 @@
       --gray: #5d5e62;
       --blue-gray: #8c94b6;
       --gray-white: #f4f8fb;
-      --gray-white-100: #EEF2F6;
+      --gray-white-100: #eef2f6;
       --blue: #1684d3;
       --yellow: #fdcd18;
       --coral: #f50f3f;
@@ -158,12 +158,8 @@
 
     .susThemedApp,
     .susThemedApp * {
-      font-family: Ergonomique;
+      font-family: Ubuntu;
       box-sizing: border-box;
     }
   </style>
 </svelte:head>
-
-<style lang="scss">
-  @use "./styles/fonts.css";
-</style>

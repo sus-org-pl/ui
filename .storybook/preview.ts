@@ -1,7 +1,6 @@
 import type { Preview } from "@storybook/svelte";
 
 import sus from "./sus";
-import "../src/lib/src/AppTheme/styles/fonts.css";
 import "../src/lib/src/AppTheme/styles/theme.css";
 
 document.body.className += "susThemedApp";
