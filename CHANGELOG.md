@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/sus-org-pl/ui/compare/v1.5.0...v1.6.0) (2025-05-25)
+
+
+### Features
+
+* **theme:** set Ubuntu font as main for headings ([64949ca](https://github.com/sus-org-pl/ui/commit/64949ca0b50065490593a2bf67475a780b7f1839))
+
 ## [1.5.0](https://github.com/sus-org-pl/ui/compare/v1.4.0...v1.5.0) (2025-04-26)
 
 
