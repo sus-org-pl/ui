@@ -3,14 +3,20 @@
 <script lang="ts">
   import cn from "classnames";
 
-  import type { CardAsComponent, CardColor, CardVariant } from "./Card.types";
+  import type {
+    CardAsComponent,
+    CardColor,
+    CardPaddingSize,
+    CardVariant,
+  } from "./Card.types";
 
   export let as: CardAsComponent = "div";
   export let color: CardColor;
   export let variant: CardVariant;
   export let fullWidth: boolean = false;
+  export let paddingSize: CardPaddingSize = "medium";
 
-  const classNames = cn(["base", color, variant], {
+  const classNames = cn(["base", color, variant, `padding-${paddingSize}`], {
     fullWidth,
   });
 </script>
@@ -30,6 +36,5 @@
 
   .base {
     border-radius: 10px;
-    padding: 24px 22px;
   }
 </style>
