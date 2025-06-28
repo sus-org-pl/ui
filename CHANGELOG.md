@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.7.0](https://github.com/sus-org-pl/ui/compare/v1.6.0...v1.7.0) (2025-06-28)
+
+
+### Features
+
+* **card:** added possibility to set card's padding size ([13ac44c](https://github.com/sus-org-pl/ui/commit/13ac44cae0745c454043575d6031dddf1dc27d62))
+* **icons:** ability to rotate icons ([76c8d23](https://github.com/sus-org-pl/ui/commit/76c8d23b0d126599dabfb0739556432fa817d324))
+* **icons:** added chevron ([bacc48f](https://github.com/sus-org-pl/ui/commit/bacc48f46e92999c206a54b1c7cd0b3f2d07e6c8))
+* **navigation:** adjusted nav to new design system ([c1700e7](https://github.com/sus-org-pl/ui/commit/c1700e7781223417441f2c1ccaf9ecb64730596e))
+* **typography:** added new medium variant ([ec6f06d](https://github.com/sus-org-pl/ui/commit/ec6f06dd5b08cced94fd3d86a2680ba3bfa9924f))
+* **typography:** adjusted colors names ([33730f5](https://github.com/sus-org-pl/ui/commit/33730f5a3830a49f5e3ac8eccb31291b38aacff8))
+
 ## [1.6.0](https://github.com/sus-org-pl/ui/compare/v1.5.0...v1.6.0) (2025-05-25)
 
 
