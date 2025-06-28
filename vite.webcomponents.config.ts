@@ -23,6 +23,9 @@ export default defineConfig({
       formats: ["es"],
       fileName: () => `web-components-v${packageJson.version}.js`,
     },
+    rollupOptions: {
+      external: ["$app/navigation"]
+    },
     outDir: "./web-components-build",
     emptyOutDir: true,
     sourcemap: false,
