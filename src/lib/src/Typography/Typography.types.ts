@@ -14,6 +14,7 @@ export const TypogprahyType = [
   "nav",
   "button",
   "small",
+  "medium",
 ] as const;
 
 export const TypographyColor = [
