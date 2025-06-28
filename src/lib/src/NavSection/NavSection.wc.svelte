@@ -1,42 +1,20 @@
 <svelte:options customElement="sus-nav-section" />
 
 <script lang="ts">
-  import Icon from "../Icon/Icon.wc.svelte";
   import Typography from "../Typography/Typography.wc.svelte";
   import SmallDonateWidget from "../Widgets/SmallDonateWidget/SmallDonateWidget.wc.svelte";
   import type {
     NavSectionAsComponent,
     NavSectionElement,
-    NavSectionSocialMediaUrls,
   } from "./NavSection.types";
   import Navlink from "../Navlink/Navlink.wc.svelte";
-  import { STATIC_SOCIAL_MEDIA_ICON_PROPS } from "./NavSection.consts";
 
-  export let socialMediaUrls: NavSectionSocialMediaUrls = {};
   export let as: NavSectionAsComponent;
   export let title: string;
   export let elements: NavSectionElement[] = [];
 </script>
 
 <svelte:element this={as} class="base">
-  <div class="socialMediaWrapper">
-    <Icon
-      href={socialMediaUrls.facebook}
-      item="facebook"
-      {...STATIC_SOCIAL_MEDIA_ICON_PROPS}
-    />
-    <Icon
-      href={socialMediaUrls.twitter}
-      item="twitter"
-      {...STATIC_SOCIAL_MEDIA_ICON_PROPS}
-    />
-    <Icon
-      href={socialMediaUrls.instagram}
-      item="instagram"
-      {...STATIC_SOCIAL_MEDIA_ICON_PROPS}
-    />
-  </div>
-
   <div class="navigation">
     <Typography type="nav" as="h2">
       <span class="sectionTitle">{title}</span>
@@ -82,8 +60,7 @@
       text-align: center;
       padding-top: 0;
 
-      .endingCard,
-      .socialMediaWrapper {
+      .endingCard {
         display: none;
       }
     }

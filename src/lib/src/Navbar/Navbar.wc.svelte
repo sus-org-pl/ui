@@ -75,7 +75,6 @@
 
     @include tablet-up {
       padding: 22px 88px;
-      justify-content: space-around;
     }
 
     &.sticky {
@@ -114,15 +113,7 @@
     }
 
     @include tablet-up {
-      gap: 40px;
-    }
-
-    @include tablet-lg-up {
-      gap: 80px;
-    }
-
-    @include desktop-up {
-      gap: 120px;
+      gap: 45px;
     }
   }
 </style>
