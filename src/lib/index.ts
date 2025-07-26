@@ -17,6 +17,7 @@ export { default as NavSection } from "./src/NavSection/NavSection.wc.svelte";
 export { default as NewsfeedCard } from "./src/NewsfeedCard/NewsfeedCard.wc.svelte";
 export { default as PhotoCollage } from "./src/PhotoCollage/PhotoCollage.wc.svelte";
 export { default as ProgressBar } from "./src/ProgressBar/ProgressBar.wc.svelte";
+export { default as TextClamped } from "./src/TextClamped/TextClamped.wc.svelte";
 export { default as Typography } from "./src/Typography/Typography.wc.svelte";
 
 // Prebuilds
