@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.9.0](https://github.com/sus-org-pl/ui/compare/v1.8.0...v1.9.0) (2025-07-26)
+
+
+### Features
+
+* **cards:** added ability to clamp text in newsfeed card ([f3ce125](https://github.com/sus-org-pl/ui/commit/f3ce1258e51ff46acbf13f47d8ba693d41b9744b))
+* **typography:** added text clamped component ([d52f6f8](https://github.com/sus-org-pl/ui/commit/d52f6f8e083348a0f895ee8a7b2997c51bc3788d))
+
 ## [1.8.0](https://github.com/sus-org-pl/ui/compare/v1.7.0...v1.8.0) (2025-07-15)
 
 
