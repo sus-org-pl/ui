@@ -7,6 +7,7 @@
   import Badge from "../Badge/Badge.wc.svelte";
   import Typography from "../Typography/Typography.wc.svelte";
   import type { NewsfeedCardAsComponent } from "./NewsfeedCard.types";
+  import TextClamped from "../TextClamped/TextClamped.wc.svelte";
 
   export let as: NewsfeedCardAsComponent = "article";
   export let href: string;
@@ -17,6 +18,7 @@
   export let title: string;
   export let excerpt: string;
   export let fullWidth: boolean = false;
+  export let textClamped: boolean = false;
 
   const classNames = cn(["base"], {
     fullWidth,
@@ -31,11 +33,19 @@
         <Badge color="blue">{tag}</Badge>
       {/if}
       <Typography type="title" as="h3">
-        {title}
+        {#if textClamped}
+          <TextClamped maxLinesCount={3}>{title}</TextClamped>
+        {:else}
+          {title}
+        {/if}
       </Typography>
       <div class="excerpt">
         <Typography type="body2" as="p">
-          {excerpt}
+          {#if textClamped}
+            <TextClamped maxLinesCount={5}>{excerpt}</TextClamped>
+          {:else}
+            {excerpt}
+          {/if}
         </Typography>
       </div>
     </div>
