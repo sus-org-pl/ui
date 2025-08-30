@@ -16,7 +16,7 @@
   const isSection = typeof target === "object";
   const href = typeof target === "string" ? target : undefined;
 
-  let isSectionOpen = isSection ? false : undefined;
+  $: isSectionOpen = isSection ? false : undefined;
 
   const toggleIsOpenSection = isSection
     ? () =>

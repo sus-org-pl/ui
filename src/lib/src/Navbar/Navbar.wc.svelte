@@ -35,7 +35,7 @@
 </script>
 
 <nav class={baseClassNames}>
-  <Logo height={38} clickable />
+  <Logo height={52} clickable />
   <div class="mobileNavToggler">
     <Icon
       on:click={handleMobileIconClick}
