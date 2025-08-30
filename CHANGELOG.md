@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.10.0](https://github.com/sus-org-pl/ui/compare/v1.9.0...v1.10.0) (2025-08-30)
+
+
+### Features
+
+* **button:** added reactivity for href ([816ab65](https://github.com/sus-org-pl/ui/commit/816ab65b636502aba4def57314a9025d1d4bd32d))
+* **navbar:** updated sizing ([30c558b](https://github.com/sus-org-pl/ui/commit/30c558bea196233b56ed60c6a3882b73d55098f1))
+
 ## [1.9.0](https://github.com/sus-org-pl/ui/compare/v1.8.0...v1.9.0) (2025-07-26)
 
 
