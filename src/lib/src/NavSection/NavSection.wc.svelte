@@ -44,7 +44,7 @@
     align-items: center;
     gap: 24px;
     background: var(--white);
-    top: 104px;
+    top: 98px;
     left: 0;
     max-width: 100%;
     padding: 22px 88px;

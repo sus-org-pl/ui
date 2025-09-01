@@ -17,7 +17,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const _Logo: Story = {
+export const _Modal: Story = {
   args: {
     isOpen: true,
     title: "Oto otwarty modal",
