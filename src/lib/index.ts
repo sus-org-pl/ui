@@ -1,4 +1,5 @@
 // Components
+export { default as Accordion } from "./src/Accordion/Accordion.wc.svelte";
 export { default as Alert } from "./src/Alert/Alert.wc.svelte";
 export { default as AppTheme } from "./src/AppTheme/AppTheme.wc.svelte";
 export { default as Autocomplete } from "./src/Autocomplete/Autocomplete.wc.svelte";
@@ -17,6 +18,7 @@ export { default as NavSection } from "./src/NavSection/NavSection.wc.svelte";
 export { default as NewsfeedCard } from "./src/NewsfeedCard/NewsfeedCard.wc.svelte";
 export { default as PhotoCollage } from "./src/PhotoCollage/PhotoCollage.wc.svelte";
 export { default as ProgressBar } from "./src/ProgressBar/ProgressBar.wc.svelte";
+export { default as TextArea } from "./src/TextArea/TextArea.wc.svelte";
 export { default as TextClamped } from "./src/TextClamped/TextClamped.wc.svelte";
 export { default as Typography } from "./src/Typography/Typography.wc.svelte";
 
