@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.11.0](https://github.com/sus-org-pl/ui/compare/v1.10.1...v1.11.0) (2025-09-01)
+
+
+### Features
+
+* **accordions:** added component ([d0ad721](https://github.com/sus-org-pl/ui/commit/d0ad721e9c12dc11e224ecec77f422da6034fa07))
+* **forms:** added textarea component ([6fe749c](https://github.com/sus-org-pl/ui/commit/6fe749cecfc65448b245f4958d80a727a49b891d))
+* **nav:** updated sizing ([62a3936](https://github.com/sus-org-pl/ui/commit/62a393640b1caf1af1d3c74f060b3ed0f59e65e6))
+
 ### [1.10.1](https://github.com/sus-org-pl/ui/compare/v1.10.0...v1.10.1) (2025-08-30)
 
 
