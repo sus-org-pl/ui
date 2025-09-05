@@ -143,16 +143,20 @@
 
     :root {
       --black: #242521;
+      --black-dark: #050504;
       --deep-gray: #444748;
       --gray: #5d5e62;
       --blue-gray: #8c94b6;
       --gray-white: #f4f8fb;
       --gray-white-100: #eef2f6;
       --blue: #1684d3;
+      --blue-dark: #0f6bad;
       --yellow: #fdcd18;
+      --yellow-dark: #fdb418;
       --coral: #f50f3f;
       --violet: #6300c7;
       --white: #ffffff;
+      --white-dark: #eef0f1;
       --danger: #ed0637;
     }
 
