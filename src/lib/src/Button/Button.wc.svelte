@@ -77,6 +77,7 @@
     font-size: 18px;
     text-decoration: none;
     width: max-content;
+    transition: all 0.3s ease-in-out;
   }
 
   .iconWrapper {

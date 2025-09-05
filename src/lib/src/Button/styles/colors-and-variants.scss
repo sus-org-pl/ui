@@ -2,12 +2,21 @@
   &.filled {
     background: var(--yellow);
     color: var(--black);
+
+    &:hover,
+    &:focus {
+      background: var(--yellow-dark);
+    }
   }
 
   &.outlined {
     background: transparent;
     color: var(--black);
     border: 4px solid var(--yellow);
+
+    &:hover {
+      background: var(--yellow);
+    }
   }
 }
 
@@ -15,12 +24,27 @@
   &.filled {
     background: var(--black);
     color: var(--white);
+
+    &:hover,
+    &:focus {
+      background: var(--black-dark);
+    }
   }
 
   &.outlined {
     background: transparent;
     color: var(--black);
     border: 4px solid var(--black);
+
+    &:hover,
+    &:focus {
+      background: var(--black);
+      color: var(--white);
+
+      :global(svg) {
+        filter: brightness(0) invert(1);
+      }
+    }
   }
 }
 
@@ -28,12 +52,23 @@
   &.filled {
     background: var(--blue);
     color: var(--white);
+
+    &:hover,
+    &:focus {
+      background: var(--blue-dark);
+    }
   }
 
   &.outlined {
     background: transparent;
     color: var(--blue);
     border: 4px solid var(--blue);
+
+    &:hover,
+    &:focus {
+      background: var(--blue);
+      color: var(--white);
+    }
   }
 }
 
@@ -41,11 +76,22 @@
   &.filled {
     background: var(--white);
     color: var(--black);
+
+    &:hover,
+    &:focus {
+      background: var(--white-dark);
+    }
   }
 
   &.outlined {
     background: transparent;
     color: var(--white);
     border: 4px solid var(--white);
+
+    &:hover,
+    &:focus {
+      background: var(--white);
+      color: var(--black);
+    }
   }
 }
