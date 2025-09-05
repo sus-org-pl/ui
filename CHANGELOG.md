@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.12.1](https://github.com/sus-org-pl/ui/compare/v1.12.0...v1.12.1) (2025-09-05)
+
+
+### Bug Fixes
+
+* **button:** additional animation for icon in outlined variants ([34e7226](https://github.com/sus-org-pl/ui/commit/34e72265de32aa1e357cf70b3271748759c2b9ad))
+
 ## [1.12.0](https://github.com/sus-org-pl/ui/compare/v1.11.1...v1.12.0) (2025-09-05)
 
 
