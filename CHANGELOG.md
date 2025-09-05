@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.11.1](https://github.com/sus-org-pl/ui/compare/v1.11.0...v1.11.1) (2025-09-05)
+
+
+### Features
+
+* **card:** updated colors in excerpt ([1e8b90a](https://github.com/sus-org-pl/ui/commit/1e8b90ad108368b95d0a6b3a77ed7d58a6aefbdb))
+
 ## [1.11.0](https://github.com/sus-org-pl/ui/compare/v1.10.1...v1.11.0) (2025-09-01)
 
 
