@@ -40,7 +40,7 @@
         {/if}
       </Typography>
       <div class="excerpt">
-        <Typography type="body2" as="p">
+        <Typography type="body2" as="p" color="gray">
           {#if textClamped}
             <TextClamped maxLinesCount={5}>{excerpt}</TextClamped>
           {:else}
@@ -86,9 +86,5 @@
     flex-direction: column;
     gap: 18px;
     padding: 22px;
-  }
-
-  .excerpt {
-    color: var(--blue-gray);
   }
 </style>
