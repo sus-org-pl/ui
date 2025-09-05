@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.12.0](https://github.com/sus-org-pl/ui/compare/v1.11.1...v1.12.0) (2025-09-05)
+
+
+### Features
+
+* **button:** added hover and focus states ([3d77c53](https://github.com/sus-org-pl/ui/commit/3d77c53a762573bd4f0daa34d66e03004468fbcf))
+* **theme:** added new color variables ([41464fc](https://github.com/sus-org-pl/ui/commit/41464fc2a543f2ac7e52baf1fe023d176e948a82))
+
 ### [1.11.1](https://github.com/sus-org-pl/ui/compare/v1.11.0...v1.11.1) (2025-09-05)
 
 
