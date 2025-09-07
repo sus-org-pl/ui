@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.12.2](https://github.com/sus-org-pl/ui/compare/v1.12.1...v1.12.2) (2025-09-07)
+
+
+### Features
+
+* **nav:** removed shadow from navigation ([a3fb9ad](https://github.com/sus-org-pl/ui/commit/a3fb9ade13b743ca5e7de3d5770451b99c0734c9))
+
 ### [1.12.1](https://github.com/sus-org-pl/ui/compare/v1.12.0...v1.12.1) (2025-09-05)
 
 
