@@ -1,7 +1,7 @@
 {
   "name": "@sus-org-pl/ui",
   "description": "The official UI library of sus.org.pl",
-  "version": "1.12.2",
+  "version": "1.12.3",
   "scripts": {
     "build": "vite build && npm run package",
     "build:webcomponents": "vite build --config vite.webcomponents.config.js",

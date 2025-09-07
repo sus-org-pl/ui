@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.12.3](https://github.com/sus-org-pl/ui/compare/v1.12.2...v1.12.3) (2025-09-07)
+
+
+### Features
+
+* **icons:** added copy icon ([fa0d112](https://github.com/sus-org-pl/ui/commit/fa0d11298016d8468e9ffa8eb4d8ea573ef71c47))
+
 ### [1.12.2](https://github.com/sus-org-pl/ui/compare/v1.12.1...v1.12.2) (2025-09-07)
 
 
