@@ -3,6 +3,7 @@ import book from "./_book";
 import cap from "./_cap";
 import chat from "./_chat";
 import chevron from "./_chevron";
+import copy from "./_copy";
 import cross from "./_cross";
 import document from "./_document";
 import facebook from "./_facebook";
@@ -21,6 +22,7 @@ const resources = {
   cap,
   chat,
   chevron,
+  copy,
   cross,
   document,
   facebook,
