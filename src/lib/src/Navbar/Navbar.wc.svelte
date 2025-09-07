@@ -68,9 +68,6 @@
     width: 100%;
 
     background: var(--white);
-    border-radius: 0 0 8px 8px;
-    box-shadow: 0px 4px 8px 3px rgba(0, 0, 0, 10%);
-
     z-index: 100;
 
     @include tablet-up {
