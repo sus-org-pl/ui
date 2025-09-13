@@ -16,6 +16,7 @@ export { default as Navbar } from "./src/Navbar/Navbar.wc.svelte";
 export { default as Navlink } from "./src/Navlink/Navlink.wc.svelte";
 export { default as NavSection } from "./src/NavSection/NavSection.wc.svelte";
 export { default as NewsfeedCard } from "./src/NewsfeedCard/NewsfeedCard.wc.svelte";
+export { default as Pagination } from "./src/Pagination/Pagination.svelte";
 export { default as PhotoCollage } from "./src/PhotoCollage/PhotoCollage.wc.svelte";
 export { default as ProgressBar } from "./src/ProgressBar/ProgressBar.wc.svelte";
 export { default as TextArea } from "./src/TextArea/TextArea.wc.svelte";
