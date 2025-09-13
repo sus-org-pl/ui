@@ -31,7 +31,7 @@
   const onClick = typeof action === "function" ? action : null;
   $: href = typeof action === "string" ? action : null;
 
-  const classNames = cn(["base", size, color, variant], {
+  $: classNames = cn(["base", size, color, variant], {
     withIcon: Boolean(iconItem),
   });
 </script>
