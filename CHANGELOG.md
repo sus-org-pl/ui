@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.13.0](https://github.com/sus-org-pl/ui/compare/v1.12.3...v1.13.0) (2025-09-13)
+
+
+### Features
+
+* **button:** dynamic classnames basing on variants ([e00468a](https://github.com/sus-org-pl/ui/commit/e00468a8cae5e6d52f8888e777e12233173d87fb))
+* **icons:** dynamic rotate parameter ([2114291](https://github.com/sus-org-pl/ui/commit/21142911513267599bc8978c77f861cfd770b16f))
+* **pagination:** added pagination component ([e9c79f9](https://github.com/sus-org-pl/ui/commit/e9c79f93908b7d64927968b1a161f05e89b5f84d))
+
 ### [1.12.3](https://github.com/sus-org-pl/ui/compare/v1.12.2...v1.12.3) (2025-09-07)
 
 
