@@ -20,7 +20,7 @@
     clickable: role === "button",
   });
 
-  $: rotationStyle = rotation ? `rotate(${rotation}deg)` : undefined;
+  $: rotationStyle = rotation ? `rotate: ${rotation}deg` : undefined;
 
   const as = href ? "a" : "div";
 </script>
